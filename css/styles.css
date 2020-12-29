@@ -1,3 +1,15 @@
+/*
+This file is used to contain all vendor imports.
+*/
+/* Additonal Vendor Tools */
+/*
+This file is used to contain all abstracts imports.
+Files inside this folder can contain abstract settings, helpers or functions. They have no direct output.
+*/
+/*
+This file is used to contain all base imports.
+Files inside this folder can contain global styles used in the project.
+*/
 /* 
     http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
@@ -132,4 +144,36 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+/* Additonal Base Stylesheets */
+/*
+This file is used to contain all component imports.
+Files inside this folder should contain all styles relating to a reusable component.
+*/
+a:focus {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 4px;
+}
+
+button:focus {
+  -webkit-box-shadow: 0 0 0 4px white, 0 0 0 2px var(--clr-primary);
+          box-shadow: 0 0 0 4px white, 0 0 0 2px var(--clr-primary);
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+/* Additonal Component Stylesheets */
+/*
+This file is used to contain all component imports.
+Files inside this folder can contain specific element styles and layout. 
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
