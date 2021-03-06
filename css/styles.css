@@ -1,4 +1,22 @@
 /*
+
+:placeholder-shown
+
+@supports (display:grid)
+
+mix-blend-mode: screen
+
+:focus-within
+
+flex-grow:9999 hack
+
+grid-auto-flow, dense, object-fit
+
+[class*="bg-"] -- all class names that begin with bg-
+
+
+*/
+/*
 This file is used to contain all vendor imports.
 */
 /* Additonal Vendor Tools */
@@ -6,6 +24,10 @@ This file is used to contain all vendor imports.
 This file is used to contain all abstracts imports.
 Files inside this folder can contain abstract settings, helpers or functions. They have no direct output.
 */
+* {
+  --primary-font: Arial, Helvetica, sans-serif;
+}
+
 /*
 This file is used to contain all base imports.
 Files inside this folder can contain global styles used in the project.
@@ -175,5 +197,32 @@ html {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--primary-font);
+}
+
+.grid-container__header {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+.grid-container__body {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: body;
+}
+
+.grid-container__footer {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: ["header", "body", "footer"];
+  grid-gap: 10px;
+  margin: 0;
+  padding: 0;
 }

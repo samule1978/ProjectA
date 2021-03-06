@@ -3,5 +3,17 @@ html {
 }
 
 body {
-	@include primaryFont();
+	font-family: var(--primary-font);
 }
+
+@include grid(
+	[header,
+	body,
+	footer],
+	[ "header",
+	"body",
+	"footer" ],
+	10px,
+	0,
+	0
+);
