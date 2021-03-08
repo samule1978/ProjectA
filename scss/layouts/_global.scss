@@ -4,16 +4,59 @@ html {
 
 body {
 	font-family: var(--primary-font);
+	font-size: 5rem;
+
+	background-color: var(--clr-volt);
+	color: var(--clr-black);
 }
 
-@include grid(
-	[header,
-	body,
-	footer],
-	[ "header",
-	"body",
-	"footer" ],
-	10px,
-	0,
-	0
-);
+.grid-container {
+	&__header {
+		grid-area: header;
+	}
+	&__content {
+		grid-area: content;
+	}
+	&__footer {
+		grid-area: footer;
+	}
+}
+
+.grid-container {
+	display: grid;
+	grid-template-areas:
+		"header"
+		"content"
+		"footer";
+	grid-gap: 10px;
+
+	max-width: 1440px;
+	height: 100vh;
+
+	margin: 0px auto;
+	padding: 0;
+}
+
+.container {
+	&__logo {
+		background: var(--clr-black);
+		position: absolute;
+		right: 0;
+		bottom: 0;
+
+		height: 101px;
+		width: 86px;
+
+		clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
+
+		overflow: hidden;
+
+		svg {
+			transform: rotate(-50deg) translate3d(50%, -50%, 0);
+			width: 125px;
+			position: absolute;
+			bottom: -15px;
+			right: -18px;
+		}
+	}
+}

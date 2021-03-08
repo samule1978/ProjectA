@@ -14,6 +14,9 @@ grid-auto-flow, dense, object-fit
 
 [class*="bg-"] -- all class names that begin with bg-
 
+**** JS ****
+Spread Operators???
+
 
 */
 /*
@@ -25,7 +28,10 @@ This file is used to contain all abstracts imports.
 Files inside this folder can contain abstract settings, helpers or functions. They have no direct output.
 */
 * {
-  --primary-font: Arial, Helvetica, sans-serif;
+  --primary-font: Verdana, sans-serif;
+  --clr-black: #000000;
+  --clr-white: #ffffff;
+  --clr-volt: #d5fb46ff;
 }
 
 /*
@@ -198,22 +204,25 @@ html {
 
 body {
   font-family: var(--primary-font);
+  font-size: 5rem;
+  background-color: var(--clr-volt);
+  color: var(--clr-black);
 }
 
 .grid-container__header {
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;
 }
 
-.grid-container__body {
-  -ms-grid-row: 4;
+.grid-container__content {
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: body;
+  grid-area: content;
 }
 
 .grid-container__footer {
-  -ms-grid-row: 6;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: footer;
 }
@@ -221,8 +230,31 @@ body {
 .grid-container {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: ["header", "body", "footer"];
+      grid-template-areas: "header" "content" "footer";
   grid-gap: 10px;
-  margin: 0;
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0px auto;
   padding: 0;
+}
+
+.container__logo {
+  background: var(--clr-black);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 101px;
+  width: 86px;
+  -webkit-clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
+          clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
+  overflow: hidden;
+}
+
+.container__logo svg {
+  -webkit-transform: rotate(-50deg) translate3d(50%, -50%, 0);
+          transform: rotate(-50deg) translate3d(50%, -50%, 0);
+  width: 125px;
+  position: absolute;
+  bottom: -15px;
+  right: -18px;
 }
