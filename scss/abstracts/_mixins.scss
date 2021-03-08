@@ -1,17 +1,1 @@
-@mixin grid($area-names, $area-sections, $grid-gap, $margin, $padding) {
-	.grid-container {
-		@each $area-name in $area-names {
-			&__#{$area-name} {
-				grid-area: $area-name;
-			}
-		}
-	}
 
-	.grid-container {
-		display: grid;
-		grid-template-areas: $area-sections;
-		grid-gap: $grid-gap;
-		margin: $margin;
-		padding: $padding;
-	}
-}
