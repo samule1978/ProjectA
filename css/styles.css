@@ -31,7 +31,14 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
   --primary-font: Verdana, sans-serif;
   --clr-black: #000000;
   --clr-white: #ffffff;
+  /* https://color.adobe.com/create/color-wheel */
   --clr-volt: #d5fb46ff;
+  --clr-adobe-volt-shades-a: #9dba34;
+  --clr-adobe-volt-shades-b: #677a22;
+  --clr-adobe-volt-shades-c: #d5fb46;
+  --clr-adobe-volt-shades-d: #323b10;
+  --clr-adobe-volt-shades-e: #bde03f;
+  --logo-width: 125px;
 }
 
 /*
@@ -204,38 +211,46 @@ html {
 
 body {
   font-family: var(--primary-font);
-  font-size: 5rem;
+  font-size: 2rem;
   background-color: var(--clr-volt);
   color: var(--clr-black);
+  margin: 17px;
 }
 
 .grid-container__header {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;
+  padding: 10px;
 }
 
 .grid-container__content {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: content;
+  padding: 10px;
 }
 
 .grid-container__footer {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: footer;
+  padding: 10px;
 }
 
 .grid-container {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "header" "content" "footer";
-  grid-gap: 10px;
+  grid-gap: 0px;
   max-width: 1440px;
-  height: 100vh;
-  margin: 0px auto;
+  height: calc(100vh - 34px);
+  margin: 0 auto;
   padding: 0;
+  border-radius: 17px 17px 0px 17px;
+  -webkit-box-shadow: 3px 3px 6px var(--clr-adobe-volt-shades-a), -3px -3px 6px var(--clr-adobe-volt-shades-e) !important;
+          box-shadow: 3px 3px 6px var(--clr-adobe-volt-shades-a), -3px -3px 6px var(--clr-adobe-volt-shades-e) !important;
+  position: relative;
 }
 
 .container__logo {
@@ -243,18 +258,18 @@ body {
   position: absolute;
   right: 0;
   bottom: 0;
-  height: 101px;
-  width: 86px;
+  height: 129px;
+  width: 129px;
   -webkit-clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
           clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
   overflow: hidden;
 }
 
 .container__logo svg {
-  -webkit-transform: rotate(-50deg) translate3d(50%, -50%, 0);
-          transform: rotate(-50deg) translate3d(50%, -50%, 0);
-  width: 125px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: var(--logo-width);
   position: absolute;
-  bottom: -15px;
-  right: -18px;
+  bottom: 40px;
+  right: -22px;
 }

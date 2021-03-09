@@ -4,21 +4,26 @@ html {
 
 body {
 	font-family: var(--primary-font);
-	font-size: 5rem;
+	font-size: 2rem;
 
 	background-color: var(--clr-volt);
 	color: var(--clr-black);
+
+	margin: 17px;
 }
 
 .grid-container {
 	&__header {
 		grid-area: header;
+		padding: 10px;
 	}
 	&__content {
 		grid-area: content;
+		padding: 10px;
 	}
 	&__footer {
 		grid-area: footer;
+		padding: 10px;
 	}
 }
 
@@ -28,13 +33,19 @@ body {
 		"header"
 		"content"
 		"footer";
-	grid-gap: 10px;
+	grid-gap: 0px;
 
 	max-width: 1440px;
-	height: 100vh;
+	height: calc(100vh - 34px);
 
-	margin: 0px auto;
+	margin: 0 auto;
 	padding: 0;
+
+	border-radius: 17px 17px 0px 17px;
+	box-shadow: 3px 3px 6px var(--clr-adobe-volt-shades-a),
+		-3px -3px 6px var(--clr-adobe-volt-shades-e) !important;
+
+	position: relative;
 }
 
 .container {
@@ -44,19 +55,32 @@ body {
 		right: 0;
 		bottom: 0;
 
-		height: 101px;
-		width: 86px;
+		height: 129px;
+		width: 129px;
 
 		clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
 
 		overflow: hidden;
 
 		svg {
-			transform: rotate(-50deg) translate3d(50%, -50%, 0);
-			width: 125px;
+			transform: rotate(-45deg);
+			width: var(--logo-width);
 			position: absolute;
-			bottom: -15px;
-			right: -18px;
+			bottom: 40px;
+			right: -22px;
+
+			#Logo_78 {
+				path {
+				}
+			}
+			#Logo_G {
+				path {
+				}
+			}
+			#Logo_S {
+				path {
+				}
+			}
 		}
 	}
 }
