@@ -12,6 +12,29 @@ body {
 	margin: var(--body-margin);
 }
 
+.shadow {
+	&__neu {
+		&__volt {
+			&--container {
+				border: solid var(--body-border) var(--clr-neu-shadow-border);
+				border-radius: 17px 17px 0px 17px;
+				box-shadow: var(--neu-shadow-tl--container)
+						var(--clr-neu-shadow-tl),
+					var(--neu-shadow-br--container) var(--clr-neu-shadow-br) !important;
+			}
+			&--toggle {
+				border: solid 1px var(--clr-neu-shadow-border);
+				border-radius: 25px;
+				box-shadow: inset 5px 5px 10px var(--clr-neu-shadow-br),
+					inset -5px -5px 10px var(--clr-neu-shadow-tl);
+
+				&--btn {
+				}
+			}
+		}
+	}
+}
+
 .grid-container {
 	&.__header {
 		grid-area: header;
@@ -27,18 +50,8 @@ body {
 	}
 }
 
-.theme {
-	&--neu {
-		&--volt {
-			border: solid var(--body-border) var(--clr-neu-shadow-border);
-			border-radius: 17px 17px 0px 17px;
-			box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl),
-				var(--neu-shadow-br--container) var(--clr-neu-shadow-br) !important;
-		}
-	}
-}
-
 .grid-container {
+	background-color: var(--clr-gird-container-bg);
 	display: grid;
 	grid-template-areas:
 		"header"

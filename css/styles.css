@@ -63,6 +63,7 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
 :root .mode--light {
   --clr-body-bg: var(--clr-volt);
   --clr-body: var(--clr-black);
+  --clr-gird-container-bg: var(--clr-volt);
   --clr-neu-shadow-tl: rgb(224, 255, 111);
   --clr-neu-shadow-br: #bde03f;
   --clr-neu-shadow-border: rgba(221, 252, 110, 0.7);
@@ -74,6 +75,8 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
 :root .mode--dark {
   --clr-body-bg: var(--clr-black);
   --clr-body: var(--clr-volt);
+  --clr-gird-container-bg: var(--clr-volt);
+  --clr-gird-container-bg: var(--clr-black);
   --clr-neu-shadow-tl: rgba(30, 30, 30, 0.7);
   --clr-neu-shadow-br: rgba(30, 30, 30, 0.3);
   --clr-neu-shadow-border: rgba(30, 30, 30, 0.7);
@@ -246,6 +249,25 @@ button:focus {
 This file is used to contain all component imports.
 Files inside this folder can contain specific element styles and layout. 
 */
+.switch__container {
+  width: 50px;
+  height: 25px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+}
+
+.switch__container__btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  background-color: black;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -256,6 +278,20 @@ body {
   background-color: var(--clr-body-bg);
   color: var(--clr-body);
   margin: var(--body-margin);
+}
+
+.shadow__neu__volt--container {
+  border: solid var(--body-border) var(--clr-neu-shadow-border);
+  border-radius: 17px 17px 0px 17px;
+  -webkit-box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl), var(--neu-shadow-br--container) var(--clr-neu-shadow-br) !important;
+          box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl), var(--neu-shadow-br--container) var(--clr-neu-shadow-br) !important;
+}
+
+.shadow__neu__volt--toggle {
+  border: solid 1px var(--clr-neu-shadow-border);
+  border-radius: 25px;
+  -webkit-box-shadow: inset 5px 5px 10px var(--clr-neu-shadow-br), inset -5px -5px 10px var(--clr-neu-shadow-tl);
+          box-shadow: inset 5px 5px 10px var(--clr-neu-shadow-br), inset -5px -5px 10px var(--clr-neu-shadow-tl);
 }
 
 .grid-container.__header {
@@ -279,14 +315,8 @@ body {
   padding: 10px;
 }
 
-.theme--neu--volt {
-  border: solid var(--body-border) var(--clr-neu-shadow-border);
-  border-radius: 17px 17px 0px 17px;
-  -webkit-box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl), var(--neu-shadow-br--container) var(--clr-neu-shadow-br) !important;
-          box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl), var(--neu-shadow-br--container) var(--clr-neu-shadow-br) !important;
-}
-
 .grid-container {
+  background-color: var(--clr-gird-container-bg);
   display: -ms-grid;
   display: grid;
       grid-template-areas: "header" "content" "footer";

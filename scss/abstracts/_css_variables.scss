@@ -22,6 +22,7 @@
 		&--light {
 			--clr-body-bg: var(--clr-volt);
 			--clr-body: var(--clr-black);
+			--clr-gird-container-bg: var(--clr-volt);
 
 			--clr-neu-shadow-tl: rgb(224, 255, 111);
 			--clr-neu-shadow-br: #bde03f;
@@ -36,6 +37,8 @@
 		&--dark {
 			--clr-body-bg: var(--clr-black);
 			--clr-body: var(--clr-volt);
+			--clr-gird-container-bg: var(--clr-volt);
+			--clr-gird-container-bg: var(--clr-black);
 
 			--clr-neu-shadow-tl: rgba(30, 30, 30, 0.7);
 			--clr-neu-shadow-br: rgba(30, 30, 30, 0.3);
