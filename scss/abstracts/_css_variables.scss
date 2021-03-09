@@ -1,5 +1,10 @@
-* {
+:root {
 	--primary-font: Verdana, sans-serif;
+
+	--body-max-width: 1024px;
+	--body-margin: 20px;
+	--body-border: 1px;
+	--logo-width: 125px;
 
 	--clr-black: #000000;
 	--clr-white: #ffffff;
@@ -12,17 +17,36 @@
 	--clr-adobe-volt-shades-d: #323b10;
 	--clr-adobe-volt-shades-e: #bde03f;
 
-	--body-max-width: 1024px;
-	--body-margin: 20px;
-	--body-border: 1px;
+	.mode {
+		/* Light Mode Colours */
+		&--light {
+			--clr-body-bg: var(--clr-volt);
+			--clr-body: var(--clr-black);
 
-	--logo-width: 125px;
+			--clr-neu-shadow-tl: rgb(224, 255, 111);
+			--clr-neu-shadow-br: #bde03f;
+			--clr-neu-shadow-border: rgba(221, 252, 110, 0.7);
 
-	//--clr-neu-shadow-tl: var(--clr-adobe-volt-shades-e);
-	//--clr-neu-shadow-br: var(--clr-adobe-volt-shades-a);
-	--clr-neu-shadow-tl: rgb(224, 255, 111);
-	--clr-neu-shadow-br: #bde03f;
-	--clr-neu-shadow-border: rgba(221, 252, 110, 0.7);
+			--clr-logo-bg: var(--clr-black);
+			--clr-logo-primary: var(--clr-volt);
+			--clr-logo-secondary: var(--clr-black);
+		}
+
+		/* Dark Mode Colours */
+		&--dark {
+			--clr-body-bg: var(--clr-black);
+			--clr-body: var(--clr-volt);
+
+			--clr-neu-shadow-tl: rgba(30, 30, 30, 0.7);
+			--clr-neu-shadow-br: rgba(30, 30, 30, 0.3);
+			--clr-neu-shadow-border: rgba(30, 30, 30, 0.7);
+
+			--clr-logo-bg: var(--clr-volt);
+			--clr-logo-primary: var(--clr-black);
+			--clr-logo-secondary: var(--clr-volt);
+		}
+	}
+
 	--neu-shadow-padding: 5px;
 	--neu-shadow-tl--container: calc(
 			-1 * ((var(--body-margin) + var(--neu-shadow-padding)) / 2)

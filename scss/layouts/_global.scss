@@ -6,14 +6,14 @@ body {
 	font-family: var(--primary-font);
 	font-size: 2rem;
 
-	background-color: var(--clr-volt);
-	color: var(--clr-black);
+	background-color: var(--clr-body-bg);
+	color: var(--clr-body);
 
 	margin: var(--body-margin);
 }
 
 .grid-container {
-	&__header {
+	&.__header {
 		grid-area: header;
 		padding: 10px;
 	}
@@ -27,11 +27,15 @@ body {
 	}
 }
 
-.neu-volt {
-	border: solid var(--body-border) var(--clr-neu-shadow-border);
-	border-radius: 17px 17px 0px 17px;
-	box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl),
-		var(--neu-shadow-br--container) var(--clr-neu-shadow-br) !important;
+.theme {
+	&--neu {
+		&--volt {
+			border: solid var(--body-border) var(--clr-neu-shadow-border);
+			border-radius: 17px 17px 0px 17px;
+			box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl),
+				var(--neu-shadow-br--container) var(--clr-neu-shadow-br) !important;
+		}
+	}
 }
 
 .grid-container {
@@ -53,7 +57,7 @@ body {
 
 .container {
 	&__logo {
-		background: var(--clr-black);
+		background: var(--clr-logo-bg);
 		position: absolute;
 		right: calc(-1 * var(--body-border));
 		bottom: calc(-1 * var(--body-border));
@@ -73,15 +77,18 @@ body {
 			right: -22px;
 
 			#Logo_78 {
+				fill: var(--clr-logo-primary) !important;
 				path {
 				}
 			}
 			#Logo_G {
 				path {
+					fill: var(--clr-logo-primary) !important;
 				}
 			}
 			#Logo_S {
 				path {
+					fill: var(--clr-logo-primary) !important;
 				}
 			}
 		}

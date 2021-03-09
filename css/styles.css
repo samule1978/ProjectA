@@ -27,35 +27,59 @@ This file is used to contain all vendor imports.
 This file is used to contain all abstracts imports.
 Files inside this folder can contain abstract settings, helpers or functions. They have no direct output.
 */
-* {
-	--primary-font: Verdana, sans-serif;
-	--clr-black: #000000;
-	--clr-white: #ffffff;
-	/* https://color.adobe.com/create/color-wheel */
-	--clr-volt: #d5fb46ff;
-	--clr-adobe-volt-shades-a: #9dba34;
-	--clr-adobe-volt-shades-b: #677a22;
-	--clr-adobe-volt-shades-c: #d5fb46;
-	--clr-adobe-volt-shades-d: #323b10;
-	--clr-adobe-volt-shades-e: #bde03f;
-	--body-max-width: 1024px;
-	--body-margin: 20px;
-	--body-border: 1px;
-	--logo-width: 125px;
-	--clr-neu-shadow-tl: rgb(224, 255, 111);
-	--clr-neu-shadow-br: #bde03f;
-	--clr-neu-shadow-border: rgba(221, 252, 110, 0.7);
-	--neu-shadow-padding: 5px;
-	--neu-shadow-tl--container: calc(
+:root {
+  --primary-font: Verdana, sans-serif;
+  --body-max-width: 1024px;
+  --body-margin: 20px;
+  --body-border: 1px;
+  --logo-width: 125px;
+  --clr-black: #000000;
+  --clr-white: #ffffff;
+  /* https://color.adobe.com/create/color-wheel */
+  --clr-volt: #d5fb46ff;
+  --clr-adobe-volt-shades-a: #9dba34;
+  --clr-adobe-volt-shades-b: #677a22;
+  --clr-adobe-volt-shades-c: #d5fb46;
+  --clr-adobe-volt-shades-d: #323b10;
+  --clr-adobe-volt-shades-e: #bde03f;
+  --neu-shadow-padding: 5px;
+  --neu-shadow-tl--container: calc(
 			-1 * ((var(--body-margin) + var(--neu-shadow-padding)) / 2)
 		)
 		calc(-1 * ((var(--body-margin) + var(--neu-shadow-padding)) / 2))
 		calc((var(--body-margin) + var(--neu-shadow-padding)) / 1);
-	--neu-shadow-br--container: calc(
+  --neu-shadow-br--container: calc(
 			(var(--body-margin) + var(--neu-shadow-padding)) / 2
 		)
 		calc((var(--body-margin) + var(--neu-shadow-padding)) / 2)
 		calc((var(--body-margin) + var(--neu-shadow-padding)) / 1);
+}
+
+:root .mode {
+  /* Light Mode Colours */
+  /* Dark Mode Colours */
+}
+
+:root .mode--light {
+  --clr-body-bg: var(--clr-volt);
+  --clr-body: var(--clr-black);
+  --clr-neu-shadow-tl: rgb(224, 255, 111);
+  --clr-neu-shadow-br: #bde03f;
+  --clr-neu-shadow-border: rgba(221, 252, 110, 0.7);
+  --clr-logo-bg: var(--clr-black);
+  --clr-logo-primary: var(--clr-volt);
+  --clr-logo-secondary: var(--clr-black);
+}
+
+:root .mode--dark {
+  --clr-body-bg: var(--clr-black);
+  --clr-body: var(--clr-volt);
+  --clr-neu-shadow-tl: rgba(30, 30, 30, 0.7);
+  --clr-neu-shadow-br: rgba(30, 30, 30, 0.3);
+  --clr-neu-shadow-border: rgba(30, 30, 30, 0.7);
+  --clr-logo-bg: var(--clr-volt);
+  --clr-logo-primary: var(--clr-black);
+  --clr-logo-secondary: var(--clr-volt);
 }
 
 /*
@@ -148,12 +172,12 @@ time,
 mark,
 audio,
 video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -168,34 +192,34 @@ hgroup,
 menu,
 nav,
 section {
-	display: block;
+  display: block;
 }
 
 body {
-	line-height: 1;
+  line-height: 1;
 }
 
 ol,
 ul {
-	list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-	quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-	content: "";
-	content: none;
+  content: "";
+  content: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Additonal Base Stylesheets */
@@ -204,17 +228,17 @@ This file is used to contain all component imports.
 Files inside this folder should contain all styles relating to a reusable component.
 */
 a:focus {
-	outline: 2px solid var(--clr-primary);
-	outline-offset: 4px;
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 4px;
 }
 
 button:focus {
-	-webkit-box-shadow: 0 0 0 4px white, 0 0 0 2px var(--clr-primary);
-	box-shadow: 0 0 0 4px white, 0 0 0 2px var(--clr-primary);
+  -webkit-box-shadow: 0 0 0 4px white, 0 0 0 2px var(--clr-primary);
+          box-shadow: 0 0 0 4px white, 0 0 0 2px var(--clr-primary);
 }
 
 ::-moz-focus-inner {
-	border: 0;
+  border: 0;
 }
 
 /* Additonal Component Stylesheets */
@@ -223,76 +247,86 @@ This file is used to contain all component imports.
 Files inside this folder can contain specific element styles and layout. 
 */
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-	font-family: var(--primary-font);
-	font-size: 2rem;
-	background-color: var(--clr-volt);
-	color: var(--clr-black);
-	margin: var(--body-margin);
+  font-family: var(--primary-font);
+  font-size: 2rem;
+  background-color: var(--clr-body-bg);
+  color: var(--clr-body);
+  margin: var(--body-margin);
 }
 
-.grid-container__header {
-	-ms-grid-row: 1;
-	-ms-grid-column: 1;
-	grid-area: header;
-	padding: 10px;
+.grid-container.__header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  padding: 10px;
 }
 
 .grid-container__content {
-	-ms-grid-row: 2;
-	-ms-grid-column: 1;
-	grid-area: content;
-	padding: 10px;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: content;
+  padding: 10px;
 }
 
 .grid-container__footer {
-	-ms-grid-row: 3;
-	-ms-grid-column: 1;
-	grid-area: footer;
-	padding: 10px;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  padding: 10px;
 }
 
-.neu-volt {
-	border: solid var(--body-border) var(--clr-neu-shadow-border);
-	border-radius: 17px 17px 0px 17px;
-	-webkit-box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl),
-		var(--neu-shadow-br--container) var(--clr-neu-shadow-br) !important;
-	box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl),
-		var(--neu-shadow-br--container) var(--clr-neu-shadow-br) !important;
+.theme--neu--volt {
+  border: solid var(--body-border) var(--clr-neu-shadow-border);
+  border-radius: 17px 17px 0px 17px;
+  -webkit-box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl), var(--neu-shadow-br--container) var(--clr-neu-shadow-br) !important;
+          box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl), var(--neu-shadow-br--container) var(--clr-neu-shadow-br) !important;
 }
 
 .grid-container {
-	display: -ms-grid;
-	display: grid;
-	grid-template-areas: "header" "content" "footer";
-	grid-gap: 0px;
-	max-width: var(--body-max-width);
-	height: calc(100vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
-	margin: 0 auto;
-	padding: 0;
-	position: relative;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header" "content" "footer";
+  grid-gap: 0px;
+  max-width: var(--body-max-width);
+  height: calc(100vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
 }
 
 .container__logo {
-	background: var(--clr-black);
-	position: absolute;
-	right: calc(-1 * var(--body-border));
-	bottom: calc(-1 * var(--body-border));
-	height: 129px;
-	width: 129px;
-	-webkit-clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
-	clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
-	overflow: hidden;
+  background: var(--clr-logo-bg);
+  position: absolute;
+  right: calc(-1 * var(--body-border));
+  bottom: calc(-1 * var(--body-border));
+  height: 129px;
+  width: 129px;
+  -webkit-clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
+          clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
+  overflow: hidden;
 }
 
 .container__logo svg {
-	-webkit-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-	width: var(--logo-width);
-	position: absolute;
-	bottom: 40px;
-	right: -22px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: var(--logo-width);
+  position: absolute;
+  bottom: 40px;
+  right: -22px;
+}
+
+.container__logo svg #Logo_78 {
+  fill: var(--clr-logo-primary) !important;
+}
+
+.container__logo svg #Logo_G path {
+  fill: var(--clr-logo-primary) !important;
+}
+
+.container__logo svg #Logo_S path {
+  fill: var(--clr-logo-primary) !important;
 }
