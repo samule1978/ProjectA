@@ -38,6 +38,8 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
   --clr-adobe-volt-shades-c: #d5fb46;
   --clr-adobe-volt-shades-d: #323b10;
   --clr-adobe-volt-shades-e: #bde03f;
+  --body-margin: 20px;
+  --body-border: 0px;
   --logo-width: 125px;
 }
 
@@ -214,7 +216,7 @@ body {
   font-size: 2rem;
   background-color: var(--clr-volt);
   color: var(--clr-black);
-  margin: 17px;
+  margin: var(--body-margin);
 }
 
 .grid-container__header {
@@ -244,9 +246,10 @@ body {
       grid-template-areas: "header" "content" "footer";
   grid-gap: 0px;
   max-width: 1440px;
-  height: calc(100vh - 34px);
+  height: calc(100vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
   margin: 0 auto;
   padding: 0;
+  border: solid var(--body-border) var(--clr-adobe-volt-shades-e);
   border-radius: 17px 17px 0px 17px;
   -webkit-box-shadow: 3px 3px 6px var(--clr-adobe-volt-shades-a), -3px -3px 6px var(--clr-adobe-volt-shades-e) !important;
           box-shadow: 3px 3px 6px var(--clr-adobe-volt-shades-a), -3px -3px 6px var(--clr-adobe-volt-shades-e) !important;
@@ -256,8 +259,8 @@ body {
 .container__logo {
   background: var(--clr-black);
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: calc(-1 * var(--body-border));
+  bottom: calc(-1 * var(--body-border));
   height: 129px;
   width: 129px;
   -webkit-clip-path: polygon(100% 0px, 0px 100%, 100% 100%);

@@ -9,7 +9,7 @@ body {
 	background-color: var(--clr-volt);
 	color: var(--clr-black);
 
-	margin: 17px;
+	margin: var(--body-margin);
 }
 
 .grid-container {
@@ -36,11 +36,12 @@ body {
 	grid-gap: 0px;
 
 	max-width: 1440px;
-	height: calc(100vh - 34px);
+	height: calc(100vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
 
 	margin: 0 auto;
 	padding: 0;
 
+	border: solid var(--body-border) var(--clr-adobe-volt-shades-e);
 	border-radius: 17px 17px 0px 17px;
 	box-shadow: 3px 3px 6px var(--clr-adobe-volt-shades-a),
 		-3px -3px 6px var(--clr-adobe-volt-shades-e) !important;
@@ -52,8 +53,8 @@ body {
 	&__logo {
 		background: var(--clr-black);
 		position: absolute;
-		right: 0;
-		bottom: 0;
+		right: calc(-1 * var(--body-border));
+		bottom: calc(-1 * var(--body-border));
 
 		height: 129px;
 		width: 129px;
