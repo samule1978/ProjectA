@@ -12,7 +12,26 @@
 	--clr-adobe-volt-shades-d: #323b10;
 	--clr-adobe-volt-shades-e: #bde03f;
 
+	--body-max-width: 1024px;
 	--body-margin: 20px;
-	--body-border: 0px;
+	--body-border: 1px;
+
 	--logo-width: 125px;
+
+	//--clr-neu-shadow-tl: var(--clr-adobe-volt-shades-e);
+	//--clr-neu-shadow-br: var(--clr-adobe-volt-shades-a);
+	--clr-neu-shadow-tl: rgb(224, 255, 111);
+	--clr-neu-shadow-br: #bde03f;
+	--clr-neu-shadow-border: rgba(221, 252, 110, 0.7);
+	--neu-shadow-padding: 5px;
+	--neu-shadow-tl--container: calc(
+			-1 * ((var(--body-margin) + var(--neu-shadow-padding)) / 2)
+		)
+		calc(-1 * ((var(--body-margin) + var(--neu-shadow-padding)) / 2))
+		calc((var(--body-margin) + var(--neu-shadow-padding)) / 1);
+	--neu-shadow-br--container: calc(
+			(var(--body-margin) + var(--neu-shadow-padding)) / 2
+		)
+		calc((var(--body-margin) + var(--neu-shadow-padding)) / 2)
+		calc((var(--body-margin) + var(--neu-shadow-padding)) / 1);
 }

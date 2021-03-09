@@ -27,6 +27,13 @@ body {
 	}
 }
 
+.neu-volt {
+	border: solid var(--body-border) var(--clr-neu-shadow-border);
+	border-radius: 17px 17px 0px 17px;
+	box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl),
+		var(--neu-shadow-br--container) var(--clr-neu-shadow-br) !important;
+}
+
 .grid-container {
 	display: grid;
 	grid-template-areas:
@@ -35,16 +42,11 @@ body {
 		"footer";
 	grid-gap: 0px;
 
-	max-width: 1440px;
+	max-width: var(--body-max-width);
 	height: calc(100vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
 
 	margin: 0 auto;
 	padding: 0;
-
-	border: solid var(--body-border) var(--clr-adobe-volt-shades-e);
-	border-radius: 17px 17px 0px 17px;
-	box-shadow: 3px 3px 6px var(--clr-adobe-volt-shades-a),
-		-3px -3px 6px var(--clr-adobe-volt-shades-e) !important;
 
 	position: relative;
 }

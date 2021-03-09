@@ -38,9 +38,24 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
   --clr-adobe-volt-shades-c: #d5fb46;
   --clr-adobe-volt-shades-d: #323b10;
   --clr-adobe-volt-shades-e: #bde03f;
+  --body-max-width: 1024px;
   --body-margin: 20px;
-  --body-border: 0px;
+  --body-border: 1px;
   --logo-width: 125px;
+  --clr-neu-shadow-tl: rgb(224, 255, 111);
+  --clr-neu-shadow-br: #bde03f;
+  --clr-neu-shadow-border: rgba(221, 252, 110, 0.7);
+  --neu-shadow-padding: 5px;
+  --neu-shadow-tl--container: calc(
+			-1 * ((var(--body-margin) + var(--neu-shadow-padding)) / 2)
+		)
+		calc(-1 * ((var(--body-margin) + var(--neu-shadow-padding)) / 2))
+		calc((var(--body-margin) + var(--neu-shadow-padding)) / 1);
+  --neu-shadow-br--container: calc(
+			(var(--body-margin) + var(--neu-shadow-padding)) / 2
+		)
+		calc((var(--body-margin) + var(--neu-shadow-padding)) / 2)
+		calc((var(--body-margin) + var(--neu-shadow-padding)) / 1);
 }
 
 /*
@@ -240,19 +255,22 @@ body {
   padding: 10px;
 }
 
+.neu-volt {
+  border: solid var(--body-border) var(--clr-neu-shadow-border);
+  border-radius: 17px 17px 0px 17px;
+  -webkit-box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl), var(--neu-shadow-br--container) var(--clr-neu-shadow-br) !important;
+          box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl), var(--neu-shadow-br--container) var(--clr-neu-shadow-br) !important;
+}
+
 .grid-container {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "header" "content" "footer";
   grid-gap: 0px;
-  max-width: 1440px;
+  max-width: var(--body-max-width);
   height: calc(100vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
   margin: 0 auto;
   padding: 0;
-  border: solid var(--body-border) var(--clr-adobe-volt-shades-e);
-  border-radius: 17px 17px 0px 17px;
-  -webkit-box-shadow: 3px 3px 6px var(--clr-adobe-volt-shades-a), -3px -3px 6px var(--clr-adobe-volt-shades-e) !important;
-          box-shadow: 3px 3px 6px var(--clr-adobe-volt-shades-a), -3px -3px 6px var(--clr-adobe-volt-shades-e) !important;
   position: relative;
 }
 
