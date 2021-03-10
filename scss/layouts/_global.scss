@@ -2,6 +2,35 @@ html {
 	scroll-behavior: smooth;
 }
 
+.shadow {
+	&__neu {
+		&__volt {
+			&--container {
+				border: solid 1px var(--clr-neu-shadow-border);
+				border-radius: 17px;
+				box-shadow: 10px 10px 20px var(--clr-neu-shadow-br),
+					-10px -10px 20px var(--clr-neu-shadow-tl);
+				&.inset {
+					box-shadow: inset 10px 10px 20px var(--clr-neu-shadow-br),
+						inset -10px -10px 20px var(--clr-neu-shadow-tl);
+				}
+			}
+			&--toggle {
+				border: solid 1px var(--clr-neu-shadow-border);
+				border-radius: 25px;
+				box-shadow: 5px 5px 10px var(--clr-neu-shadow-br),
+					-5px -5px 10px var(--clr-neu-shadow-tl);
+				&.inset {
+					box-shadow: inset 5px 5px 10px var(--clr-neu-shadow-br),
+						inset -5px -5px 10px var(--clr-neu-shadow-tl);
+				}
+			}
+			&--btn {
+			}
+		}
+	}
+}
+
 body {
 	font-family: var(--primary-font);
 	font-size: 2rem;
@@ -10,29 +39,6 @@ body {
 	color: var(--clr-body);
 
 	margin: var(--body-margin);
-}
-
-.shadow {
-	&__neu {
-		&__volt {
-			&--container {
-				border: solid var(--body-border) var(--clr-neu-shadow-border);
-				border-radius: 17px 17px 0px 17px;
-				box-shadow: var(--neu-shadow-tl--container)
-						var(--clr-neu-shadow-tl),
-					var(--neu-shadow-br--container) var(--clr-neu-shadow-br) !important;
-			}
-			&--toggle {
-				border: solid 1px var(--clr-neu-shadow-border);
-				border-radius: 25px;
-				box-shadow: inset 5px 5px 10px var(--clr-neu-shadow-br),
-					inset -5px -5px 10px var(--clr-neu-shadow-tl);
-
-				&--btn {
-				}
-			}
-		}
-	}
 }
 
 .grid-container {
@@ -48,10 +54,6 @@ body {
 		grid-area: footer;
 		padding: 10px;
 	}
-}
-
-.grid-container {
-	background-color: var(--clr-gird-container-bg);
 	display: grid;
 	grid-template-areas:
 		"header"
@@ -60,16 +62,29 @@ body {
 	grid-gap: 0px;
 
 	max-width: var(--body-max-width);
-	height: calc(100vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
-
+	min-height: 50vh;
+	//height: calc(100vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
 	margin: 0 auto;
 	padding: 0;
-
 	position: relative;
+
+	background-color: var(--clr-gird-container-bg);
+
+	/* Overrides for neumorphism shadow border effects. */
+	border: solid var(--body-border) var(--clr-neu-shadow-border);
+	border-radius: 17px 17px 0px 17px;
+	box-shadow: var(--neu-shadow-tl--container)
+			var(--clr-neu-shadow-tl),
+		var(--neu-shadow-br--container) var(--clr-neu-shadow-br);
+	&.inset {		
+		box-shadow: inset var(--neu-shadow-tl--container)
+				var(--clr-neu-shadow-tl),
+			inset var(--neu-shadow-br--container) var(--clr-neu-shadow-br);
+	}	
 }
 
-.container {
-	&__logo {
+.logo {
+	&__container {
 		background: var(--clr-logo-bg);
 		position: absolute;
 		right: calc(-1 * var(--body-border));

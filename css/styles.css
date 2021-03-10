@@ -250,8 +250,8 @@ This file is used to contain all component imports.
 Files inside this folder can contain specific element styles and layout. 
 */
 .switch__container {
-  width: 50px;
-  height: 25px;
+  width: 35px;
+  height: 20px;
   position: absolute;
   right: 0;
   top: 0;
@@ -261,15 +261,39 @@ Files inside this folder can contain specific element styles and layout.
 .switch__container__btn {
   position: absolute;
   top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
+  right: 0;
+  height: 20px;
+  width: 20px;
   border-radius: 100%;
   background-color: black;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.shadow__neu__volt--container {
+  border: solid 1px var(--clr-neu-shadow-border);
+  border-radius: 17px;
+  -webkit-box-shadow: 10px 10px 20px var(--clr-neu-shadow-br), -10px -10px 20px var(--clr-neu-shadow-tl);
+          box-shadow: 10px 10px 20px var(--clr-neu-shadow-br), -10px -10px 20px var(--clr-neu-shadow-tl);
+}
+
+.shadow__neu__volt--container.inset {
+  -webkit-box-shadow: inset 10px 10px 20px var(--clr-neu-shadow-br), inset -10px -10px 20px var(--clr-neu-shadow-tl);
+          box-shadow: inset 10px 10px 20px var(--clr-neu-shadow-br), inset -10px -10px 20px var(--clr-neu-shadow-tl);
+}
+
+.shadow__neu__volt--toggle {
+  border: solid 1px var(--clr-neu-shadow-border);
+  border-radius: 25px;
+  -webkit-box-shadow: 5px 5px 10px var(--clr-neu-shadow-br), -5px -5px 10px var(--clr-neu-shadow-tl);
+          box-shadow: 5px 5px 10px var(--clr-neu-shadow-br), -5px -5px 10px var(--clr-neu-shadow-tl);
+}
+
+.shadow__neu__volt--toggle.inset {
+  -webkit-box-shadow: inset 5px 5px 10px var(--clr-neu-shadow-br), inset -5px -5px 10px var(--clr-neu-shadow-tl);
+          box-shadow: inset 5px 5px 10px var(--clr-neu-shadow-br), inset -5px -5px 10px var(--clr-neu-shadow-tl);
 }
 
 body {
@@ -280,18 +304,22 @@ body {
   margin: var(--body-margin);
 }
 
-.shadow__neu__volt--container {
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header" "content" "footer";
+  grid-gap: 0px;
+  max-width: var(--body-max-width);
+  min-height: 50vh;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  background-color: var(--clr-gird-container-bg);
+  /* Overrides for neumorphism shadow border effects. */
   border: solid var(--body-border) var(--clr-neu-shadow-border);
   border-radius: 17px 17px 0px 17px;
-  -webkit-box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl), var(--neu-shadow-br--container) var(--clr-neu-shadow-br) !important;
-          box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl), var(--neu-shadow-br--container) var(--clr-neu-shadow-br) !important;
-}
-
-.shadow__neu__volt--toggle {
-  border: solid 1px var(--clr-neu-shadow-border);
-  border-radius: 25px;
-  -webkit-box-shadow: inset 5px 5px 10px var(--clr-neu-shadow-br), inset -5px -5px 10px var(--clr-neu-shadow-tl);
-          box-shadow: inset 5px 5px 10px var(--clr-neu-shadow-br), inset -5px -5px 10px var(--clr-neu-shadow-tl);
+  -webkit-box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl), var(--neu-shadow-br--container) var(--clr-neu-shadow-br);
+          box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl), var(--neu-shadow-br--container) var(--clr-neu-shadow-br);
 }
 
 .grid-container.__header {
@@ -315,20 +343,12 @@ body {
   padding: 10px;
 }
 
-.grid-container {
-  background-color: var(--clr-gird-container-bg);
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "header" "content" "footer";
-  grid-gap: 0px;
-  max-width: var(--body-max-width);
-  height: calc(100vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
-  margin: 0 auto;
-  padding: 0;
-  position: relative;
+.grid-container.inset {
+  -webkit-box-shadow: inset var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl), inset var(--neu-shadow-br--container) var(--clr-neu-shadow-br);
+          box-shadow: inset var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl), inset var(--neu-shadow-br--container) var(--clr-neu-shadow-br);
 }
 
-.container__logo {
+.logo__container {
   background: var(--clr-logo-bg);
   position: absolute;
   right: calc(-1 * var(--body-border));
@@ -340,7 +360,7 @@ body {
   overflow: hidden;
 }
 
-.container__logo svg {
+.logo__container svg {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   width: var(--logo-width);
@@ -349,14 +369,14 @@ body {
   right: -22px;
 }
 
-.container__logo svg #Logo_78 {
+.logo__container svg #Logo_78 {
   fill: var(--clr-logo-primary) !important;
 }
 
-.container__logo svg #Logo_G path {
+.logo__container svg #Logo_G path {
   fill: var(--clr-logo-primary) !important;
 }
 
-.container__logo svg #Logo_S path {
+.logo__container svg #Logo_S path {
   fill: var(--clr-logo-primary) !important;
 }

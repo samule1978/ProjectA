@@ -1,6 +1,6 @@
 .switch__container {
-	width: 50px;
-	height: 25px;
+	width: 35px;
+	height: 20px;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -9,9 +9,9 @@
 	&__btn {
 		position: absolute;
 		top: 0;
-		left: 0;
-		height: 25px;
-		width: 25px;
+		right: 0;
+		height: 20px;
+		width: 20px;
 		border-radius: 100%;
 		background-color: black;
 	}
