@@ -15,17 +15,43 @@ html {
 						inset -10px -10px 20px var(--clr-neu-shadow-tl);
 				}
 			}
-			&--toggle {
+			&--radio {
+				width: 40px;
+				height: 20px;
 				border: solid 1px var(--clr-neu-shadow-border);
-				border-radius: 25px;
-				box-shadow: 5px 5px 10px var(--clr-neu-shadow-br),
-					-5px -5px 10px var(--clr-neu-shadow-tl);
-				&.inset {
-					box-shadow: inset 5px 5px 10px var(--clr-neu-shadow-br),
-						inset -5px -5px 10px var(--clr-neu-shadow-tl);
+				border-radius: 20px;
+				box-shadow: 3px 3px 6px var(--clr-neu-shadow-br),
+					-3px -3px 6px rgba(255, 255, 255, 1);
+				//box-shadow: 2px 2px 4px #b8b9be,-2px -2px 4px #fff;
+
+				&:before {
+					content: "";
+					height: 16px;
+					width: 16px;
+					position: absolute;
+					left: 0;
+					top: 0;
+					margin: 1px;
+					border-radius: 100%;
+					border: solid 1px var(--clr-volt);
+					background-color: var(--clr-black);
+					box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8),
+						-2px -2px 4px var(--clr-neu-shadow-br);
 				}
-			}
-			&--btn {
+				&.on:before {
+					left: unset;
+					right: 0;
+				}
+
+				&.inset {
+					&:before {
+						box-shadow: 2px 2px 4px var(--clr-neu-shadow-br),
+							-2px -2px 4px rgba(255, 255, 255, 0.8);
+					}
+
+					box-shadow: inset 3px 3px 6px var(--clr-neu-shadow-br),
+						inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+				}
 			}
 		}
 	}
@@ -73,14 +99,13 @@ body {
 	/* Overrides for neumorphism shadow border effects. */
 	border: solid var(--body-border) var(--clr-neu-shadow-border);
 	border-radius: 17px 17px 0px 17px;
-	box-shadow: var(--neu-shadow-tl--container)
-			var(--clr-neu-shadow-tl),
+	box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl),
 		var(--neu-shadow-br--container) var(--clr-neu-shadow-br);
-	&.inset {		
+	&.inset {
 		box-shadow: inset var(--neu-shadow-tl--container)
 				var(--clr-neu-shadow-tl),
 			inset var(--neu-shadow-br--container) var(--clr-neu-shadow-br);
-	}	
+	}
 }
 
 .logo {

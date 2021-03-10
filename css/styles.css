@@ -250,22 +250,10 @@ This file is used to contain all component imports.
 Files inside this folder can contain specific element styles and layout. 
 */
 .switch__container {
-  width: 35px;
-  height: 20px;
   position: absolute;
   right: 0;
   top: 0;
   margin: 10px;
-}
-
-.switch__container__btn {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 20px;
-  width: 20px;
-  border-radius: 100%;
-  background-color: black;
 }
 
 html {
@@ -284,16 +272,43 @@ html {
           box-shadow: inset 10px 10px 20px var(--clr-neu-shadow-br), inset -10px -10px 20px var(--clr-neu-shadow-tl);
 }
 
-.shadow__neu__volt--toggle {
+.shadow__neu__volt--radio {
+  width: 40px;
+  height: 20px;
   border: solid 1px var(--clr-neu-shadow-border);
-  border-radius: 25px;
-  -webkit-box-shadow: 5px 5px 10px var(--clr-neu-shadow-br), -5px -5px 10px var(--clr-neu-shadow-tl);
-          box-shadow: 5px 5px 10px var(--clr-neu-shadow-br), -5px -5px 10px var(--clr-neu-shadow-tl);
+  border-radius: 20px;
+  -webkit-box-shadow: 3px 3px 6px var(--clr-neu-shadow-br), -3px -3px 6px white;
+          box-shadow: 3px 3px 6px var(--clr-neu-shadow-br), -3px -3px 6px white;
 }
 
-.shadow__neu__volt--toggle.inset {
-  -webkit-box-shadow: inset 5px 5px 10px var(--clr-neu-shadow-br), inset -5px -5px 10px var(--clr-neu-shadow-tl);
-          box-shadow: inset 5px 5px 10px var(--clr-neu-shadow-br), inset -5px -5px 10px var(--clr-neu-shadow-tl);
+.shadow__neu__volt--radio:before {
+  content: "";
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 1px;
+  border-radius: 100%;
+  border: solid 1px var(--clr-volt);
+  background-color: var(--clr-black);
+  -webkit-box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8), -2px -2px 4px var(--clr-neu-shadow-br);
+          box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8), -2px -2px 4px var(--clr-neu-shadow-br);
+}
+
+.shadow__neu__volt--radio.on:before {
+  left: unset;
+  right: 0;
+}
+
+.shadow__neu__volt--radio.inset {
+  -webkit-box-shadow: inset 3px 3px 6px var(--clr-neu-shadow-br), inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+          box-shadow: inset 3px 3px 6px var(--clr-neu-shadow-br), inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+}
+
+.shadow__neu__volt--radio.inset:before {
+  -webkit-box-shadow: 2px 2px 4px var(--clr-neu-shadow-br), -2px -2px 4px rgba(255, 255, 255, 0.8);
+          box-shadow: 2px 2px 4px var(--clr-neu-shadow-br), -2px -2px 4px rgba(255, 255, 255, 0.8);
 }
 
 body {
