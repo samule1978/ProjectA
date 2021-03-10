@@ -6,6 +6,8 @@
 	--body-border: 1px;
 	--logo-width: 125px;
 
+	--cb-smooth: cubic-bezier(0.27, 0.01, 0.38, 1.06);
+
 	--clr-black: #000000;
 	--clr-white: #ffffff;
 
@@ -31,6 +33,9 @@
 			--clr-logo-bg: var(--clr-black);
 			--clr-logo-primary: var(--clr-volt);
 			--clr-logo-secondary: var(--clr-black);
+
+			--clr-radio-bdr: var(--clr-volt);
+			--clr-radio-bg: var(--clr-black);
 		}
 
 		/* Dark Mode Colours */
@@ -47,9 +52,13 @@
 			--clr-logo-bg: var(--clr-volt);
 			--clr-logo-primary: var(--clr-black);
 			--clr-logo-secondary: var(--clr-volt);
+
+			--clr-radio-bdr: var(--clr-black);
+			--clr-radio-bg: var(--clr-volt);
 		}
 	}
 
+	/* Variables for Main Content Panel 'grid-container' */
 	--neu-shadow-padding: 5px;
 	--neu-shadow-tl--container: calc(
 			-1 * ((var(--body-margin) + var(--neu-shadow-padding)) / 2)

@@ -10,38 +10,41 @@ html {
 				border-radius: 17px;
 				box-shadow: 10px 10px 20px var(--clr-neu-shadow-br),
 					-10px -10px 20px var(--clr-neu-shadow-tl);
-					
+
 				&.inset {
 					box-shadow: inset 10px 10px 20px var(--clr-neu-shadow-br),
 						inset -10px -10px 20px var(--clr-neu-shadow-tl);
 				}
 			}
 			&--radio {
+				cursor: pointer;
+
+				background-color: rgba(0, 0, 0, 0);
+				transition: background-color 100ms var(--cb-smooth) 50ms;
+
 				width: 35px;
 				height: 20px;
 				border: solid 1px var(--clr-neu-shadow-border);
 				border-radius: 20px;
 				box-shadow: 3px 3px 6px var(--clr-neu-shadow-br),
 					-3px -3px 6px rgba(255, 255, 255, 1);
-				//box-shadow: 2px 2px 4px #b8b9be,-2px -2px 4px #fff;
 
 				&:before {
 					content: "";
 					height: 16px;
 					width: 16px;
 					position: absolute;
+
 					left: 0;
+					transition: left 150ms var(--cb-smooth);
+
 					top: 0;
 					margin: 1px;
 					border-radius: 100%;
-					border: solid 1px var(--clr-volt);
-					background-color: var(--clr-black);
+					border: solid 1px var(--clr-radio-bdr);
+					background-color: var(--clr-radio-bg);
 					box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8),
 						-2px -2px 4px var(--clr-neu-shadow-br);
-				}
-				&.on:before {
-					left: unset;
-					right: 0;
 				}
 
 				&.inset {
@@ -52,6 +55,17 @@ html {
 
 					box-shadow: inset 3px 3px 6px var(--clr-neu-shadow-br),
 						inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+				}
+
+				&.on {
+					background-color: rgba(0, 0, 0, 0.3);
+					//box-shadow: unset;
+
+					&:before {
+						left: 15px;
+						box-shadow: 2px 2px 4px var(--clr-neu-shadow-br),
+							-2px -2px 4px rgba(255, 255, 255, 0.5);
+					}
 				}
 			}
 		}
