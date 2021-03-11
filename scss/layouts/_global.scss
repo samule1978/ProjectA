@@ -6,14 +6,12 @@ html {
 	&__neu {
 		&__volt {
 			&--container {
-				border: solid 1px var(--clr-neu-shadow-border);
+				background-color: var(--neu-container-bg-clr);
 				border-radius: 17px;
-				box-shadow: 10px 10px 20px var(--clr-neu-shadow-br),
-					-10px -10px 20px var(--clr-neu-shadow-tl);
-
+				border: var(--neu-container-bdr);				
+				box-shadow: var(--neu-container-bxsdw);
 				&.inset {
-					box-shadow: inset 10px 10px 20px var(--clr-neu-shadow-br),
-						inset -10px -10px 20px var(--clr-neu-shadow-tl);
+					box-shadow: var(--neu-container-bxsdw-inset);
 				}
 			}
 			&--radio {
@@ -24,7 +22,7 @@ html {
 
 				width: 35px;
 				height: 20px;
-				border: solid 1px var(--clr-neu-shadow-border);
+				border: var(--neu-radio-bdr);
 				border-radius: 20px;
 				box-shadow: 3px 3px 6px var(--clr-neu-shadow-br),
 					-3px -3px 6px rgba(255, 255, 255, 1);
@@ -49,22 +47,24 @@ html {
 
 				&.inset {
 					&:before {
-						box-shadow: 2px 2px 4px var(--clr-neu-shadow-br),
-							-2px -2px 4px rgba(255, 255, 255, 0.8);
+						box-shadow: 1px 1px 2px var(--clr-neu-shadow-br),
+							-1px -1px 2px rgba(255, 255, 255, 0.4);
 					}
 
-					box-shadow: inset 3px 3px 6px var(--clr-neu-shadow-br),
-						inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+					box-shadow: var(--clr-radio-shadow);
+
+					&.on {
+						box-shadow: var(--clr-radio-shadow);
+					}
 				}
 
 				&.on {
-					background-color: rgba(0, 0, 0, 0.3);
-					//box-shadow: unset;
+					background-color: rgba(0, 0, 0, 0.7);
 
 					&:before {
 						left: 15px;
-						box-shadow: 2px 2px 4px var(--clr-neu-shadow-br),
-							-2px -2px 4px rgba(255, 255, 255, 0.5);
+						box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5),
+							-1px -1px 2px rgba(255, 255, 255, 0.5);
 					}
 				}
 			}
@@ -106,24 +106,15 @@ body {
 	transition: all 500ms var(--cb-smooth);
 
 	max-width: var(--body-max-width);
-	min-height: 300px;
-	height: calc(100vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
+	min-height: 500px;
+	//height: calc(100vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
 	margin: 0 auto;
 	padding: 0;
 	position: relative;
 
-	background-color: var(--clr-gird-container-bg);
-
 	/* Overrides for neumorphism shadow border effects. */
-	border: solid var(--body-border) var(--clr-neu-shadow-border);
+	border-width: var(--body-border);
 	border-radius: 17px 17px 0px 17px;
-	box-shadow: var(--neu-shadow-tl--container) var(--clr-neu-shadow-tl),
-		var(--neu-shadow-br--container) var(--clr-neu-shadow-br);
-	&.inset {
-		box-shadow: inset var(--neu-shadow-tl--container)
-				var(--clr-neu-shadow-tl),
-			inset var(--neu-shadow-br--container) var(--clr-neu-shadow-br);
-	}
 }
 
 .logo {
@@ -155,13 +146,13 @@ body {
 			}
 			#Logo_G {
 				path {
-					transition: fill 500ms var(--cb-smooth);
+					transition: fill 250ms var(--cb-smooth);
 					fill: var(--clr-logo-primary) !important;
 				}
 			}
 			#Logo_S {
 				path {
-					transition: fill 500ms var(--cb-smooth);
+					transition: fill 250ms var(--cb-smooth);
 					fill: var(--clr-logo-primary) !important;
 				}
 			}

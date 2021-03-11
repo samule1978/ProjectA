@@ -24,7 +24,15 @@
 		&--light {
 			--clr-body-bg: var(--clr-volt);
 			--clr-body: var(--clr-black);
-			--clr-gird-container-bg: var(--clr-volt);
+
+			--neu-container-bg-clr: var(--clr-volt);
+			--neu-container-bdr: solid 1px rgba(221, 252, 110, 0.7);
+			--neu-container-bxsdw: 10px 10px 20px #bde03f,	-10px -10px 20px rgb(224, 255, 111);
+			--neu-container-bxsdw-inset: inset 10px 10px 20px #bde03f, inset -10px -10px 20px rgb(224, 255, 111);		
+
+			--neu-radio-bdr: solid 1px rgba(221, 252, 110, 0.7);
+
+			
 
 			--clr-neu-shadow-tl: rgb(224, 255, 111);
 			--clr-neu-shadow-br: #bde03f;
@@ -36,17 +44,24 @@
 
 			--clr-radio-bdr: var(--clr-volt);
 			--clr-radio-bg: var(--clr-black);
+
+			--clr-radio-shadow: inset 1px 1px 2px var(--clr-neu-shadow-br), inset -1px -1px 2px rgba(255, 255, 255, 0.4);
 		}
 
 		/* Dark Mode Colours */
 		&--dark {
 			--clr-body-bg: var(--clr-black);
 			--clr-body: var(--clr-volt);
-			--clr-gird-container-bg: var(--clr-volt);
-			--clr-gird-container-bg: var(--clr-black);
+
+			--neu-container-bg-clr: var(--clr-black);
+			--neu-container-bdr: solid 1px rgba(30, 30, 30, 0.4);
+			--neu-container-bxsdw: 10px 10px 20px rgba(30, 30, 30, 0.4), -10px -10px 20px rgba(30, 30, 30, 0.7);
+			--neu-container-bxsdw-inset: inset 10px 10px 20px rgba(30, 30, 30, 0.4), inset -10px -10px 20px rgba(30, 30, 30, 0.7);
+
+
 
 			--clr-neu-shadow-tl: rgba(30, 30, 30, 0.7);
-			--clr-neu-shadow-br: rgba(30, 30, 30, 0.3);
+			--clr-neu-shadow-br: rgba(30, 30, 30, 0.4);
 			--clr-neu-shadow-border: rgba(30, 30, 30, 0.7);
 
 			--clr-logo-bg: var(--clr-volt);
@@ -55,19 +70,9 @@
 
 			--clr-radio-bdr: var(--clr-black);
 			--clr-radio-bg: var(--clr-volt);
+
+			--clr-radio-shadow: inset 1px 1px 2px var(--clr-neu-shadow-br), inset -1px -1px 2px rgba(255, 255, 255, 0.4);
+			
 		}
 	}
-
-	/* Variables for Main Content Panel 'grid-container' */
-	--neu-shadow-padding: 5px;
-	--neu-shadow-tl--container: calc(
-			-1 * ((var(--body-margin) + var(--neu-shadow-padding)) / 2)
-		)
-		calc(-1 * ((var(--body-margin) + var(--neu-shadow-padding)) / 2))
-		calc((var(--body-margin) + var(--neu-shadow-padding)) / 1);
-	--neu-shadow-br--container: calc(
-			(var(--body-margin) + var(--neu-shadow-padding)) / 2
-		)
-		calc((var(--body-margin) + var(--neu-shadow-padding)) / 2)
-		calc((var(--body-margin) + var(--neu-shadow-padding)) / 1);
 }
