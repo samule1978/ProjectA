@@ -31,7 +31,7 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
   --primary-font: Verdana, sans-serif;
   --body-max-width: 1024px;
   --body-margin: 20px;
-  --body-border: 1px;
+  --body-border: 0px;
   --logo-width: 125px;
   --cb-smooth: cubic-bezier(0.27, 0.01, 0.38, 1.06);
   --clr-black: #000000;
@@ -356,6 +356,8 @@ body {
   font-family: var(--primary-font);
   font-size: 2rem;
   background-color: var(--clr-body-bg);
+  -webkit-transition: all 500ms var(--cb-smooth);
+  transition: all 500ms var(--cb-smooth);
   color: var(--clr-body);
   margin: var(--body-margin);
 }
@@ -365,6 +367,8 @@ body {
   display: grid;
       grid-template-areas: "header" "content" "footer";
   grid-gap: 0px;
+  -webkit-transition: all 500ms var(--cb-smooth);
+  transition: all 500ms var(--cb-smooth);
   max-width: var(--body-max-width);
   min-height: 50vh;
   margin: 0 auto;
@@ -409,8 +413,8 @@ body {
   position: absolute;
   right: calc(-1 * var(--body-border));
   bottom: calc(-1 * var(--body-border));
-  height: 129px;
-  width: 129px;
+  height: 128px;
+  width: 128px;
   -webkit-clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
           clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
   overflow: hidden;
