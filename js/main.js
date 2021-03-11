@@ -4,6 +4,12 @@ let switchMode = (btn) => {
 		document.body.classList.toggle(mode)
 	);
 };
-
 const modeBtn = document.querySelector(".switch__btn");
 modeBtn.addEventListener("click", () => switchMode(modeBtn));
+
+let toggleOnOff = (element) => {
+	element.classList.toggle("on");
+};
+//const radioBtns = [...document.querySelectorAll(`[class^="--radio"]`)];
+//radioBtns.addEventListener("click", () => toggleOnOff(radioBtn));
+

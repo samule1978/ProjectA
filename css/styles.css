@@ -370,7 +370,8 @@ body {
   -webkit-transition: all 500ms var(--cb-smooth);
   transition: all 500ms var(--cb-smooth);
   max-width: var(--body-max-width);
-  min-height: 50vh;
+  min-height: 300px;
+  height: calc(100vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
   margin: 0 auto;
   padding: 0;
   position: relative;
@@ -430,13 +431,19 @@ body {
 }
 
 .logo__container svg #Logo_78 {
+  -webkit-transition: fill 500ms var(--cb-smooth);
+  transition: fill 500ms var(--cb-smooth);
   fill: var(--clr-logo-primary) !important;
 }
 
 .logo__container svg #Logo_G path {
+  -webkit-transition: fill 500ms var(--cb-smooth);
+  transition: fill 500ms var(--cb-smooth);
   fill: var(--clr-logo-primary) !important;
 }
 
 .logo__container svg #Logo_S path {
+  -webkit-transition: fill 500ms var(--cb-smooth);
+  transition: fill 500ms var(--cb-smooth);
   fill: var(--clr-logo-primary) !important;
 }
