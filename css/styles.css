@@ -95,7 +95,7 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
   --neu-radio-osm: 4px;
   --neu-radio-tl-spread: 0px;
   --neu-radio-br-spread: 0px;
-  --neu-radio-bg-clr: rgba(0, 0, 0, 0);
+  --neu-radio-bg-clr: rgba(0, 0, 0, 0.3);
   --neu-radio-bdr-clr: rgba(50, 50, 50, 0.5);
   --neu-radio-tl-clr: rgba(50, 50, 50, 0.2);
   --neu-radio-br-clr: rgba(50, 50, 50, 0.7);
@@ -348,10 +348,6 @@ html {
   border: solid 1px var(--neu-radio-btn-bdr-clr);
   -webkit-box-shadow: calc(var(--neu-radio-btn-osm) / 2) calc(var(--neu-radio-btn-osm) / 2) var(--neu-radio-btn-osm) var(--neu-radio-btn-tl-spread) var(--neu-radio-btn-tl-clr), calc(-1 * (var(--neu-radio-btn-osm) / 2)) calc(-1 * (var(--neu-radio-btn-osm) / 2)) var(--neu-radio-btn-osm) var(--neu-radio-btn-bl-spread) var(--neu-radio-btn-br-clr);
           box-shadow: calc(var(--neu-radio-btn-osm) / 2) calc(var(--neu-radio-btn-osm) / 2) var(--neu-radio-btn-osm) var(--neu-radio-btn-tl-spread) var(--neu-radio-btn-tl-clr), calc(-1 * (var(--neu-radio-btn-osm) / 2)) calc(-1 * (var(--neu-radio-btn-osm) / 2)) var(--neu-radio-btn-osm) var(--neu-radio-btn-bl-spread) var(--neu-radio-btn-br-clr);
-}
-
-.shadow__neu__volt--radio.on {
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .shadow__neu__volt--radio.on:before {
