@@ -4,6 +4,7 @@
 	$borderSize,
 	$borderColor,
 	$pxOffSetMax,
+    $pxSpread,
 	$topLeftBlurColor,
 	$bottomRightBlurColor,
 	$inset: false
@@ -22,20 +23,24 @@
 				calc(#{$pxOffSetMax} / 2)
 				calc(#{$pxOffSetMax} / 2)
 				$pxOffSetMax
+                $pxSpread
 				$topLeftBlurColor,
 			inset
 				calc(-1 * (#{$pxOffSetMax} / 2))
 				calc(-1 * (#{$pxOffSetMax} / 2))
 				$pxOffSetMax
+                $pxSpread
 				$bottomRightBlurColor;
 	} @else {
 		box-shadow: calc(#{$pxOffSetMax} / 2)
 				calc(#{$pxOffSetMax} / 2)
 				$pxOffSetMax
+                $pxSpread
 				$topLeftBlurColor,
 			calc(-1 * (#{$pxOffSetMax} / 2))
 				calc(-1 * (#{$pxOffSetMax} / 2))
 				$pxOffSetMax
+                $pxSpread
 				$bottomRightBlurColor;
 	}
 }

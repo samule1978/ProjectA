@@ -12,6 +12,7 @@ html {
 					var(--neu-ctr-bdr-sz),
 					var(--neu-ctr-bdr-clr),
 					var(--neu-ctr-osmx),
+					0px,
 					var(--neu-ctr-tl-clr),
 					var(--neu-ctr-br-clr)
 				);
@@ -23,6 +24,7 @@ html {
 						null,
 						null,
 						var(--neu-ctr-osmx),
+						0px,
 						var(--neu-ctr-tl-clr),
 						var(--neu-ctr-br-clr),
 						true
@@ -43,6 +45,7 @@ html {
 					var(--neu-radio-bdr-sz),
 					var(--neu-radio-bdr-clr),
 					var(--neu-radio-osmx),
+					0px,
 					var(--neu-radio-tl-clr),
 					var(--neu-radio-br-clr)
 				);
@@ -65,6 +68,7 @@ html {
 						var(--neu-radio-btn-bdr-sz),
 						var(--neu-radio-btn-bdr-clr),
 						var(--neu-radio-btn-osmx),
+						0px,
 						var(--neu-radio-btn-tl-clr),
 						var(--neu-radio-btn-br-clr)
 					);
@@ -85,6 +89,7 @@ html {
 						null,
 						null,
 						var(--neu-radio-osmx),
+						0px,
 						var(--neu-radio-tl-clr),
 						var(--neu-radio-br-clr),
 						true

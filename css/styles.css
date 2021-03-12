@@ -305,13 +305,13 @@ html {
   border-radius: 17px;
   background-color: var(--neu-ctr-bg-clr);
   border: solid var(--neu-ctr-bdr-sz) var(--neu-ctr-bdr-clr);
-  -webkit-box-shadow: calc(var(--neu-ctr-osmx) / 2) calc(var(--neu-ctr-osmx) / 2) var(--neu-ctr-osmx) var(--neu-ctr-tl-clr), calc(-1 * (var(--neu-ctr-osmx) / 2)) calc(-1 * (var(--neu-ctr-osmx) / 2)) var(--neu-ctr-osmx) var(--neu-ctr-br-clr);
-          box-shadow: calc(var(--neu-ctr-osmx) / 2) calc(var(--neu-ctr-osmx) / 2) var(--neu-ctr-osmx) var(--neu-ctr-tl-clr), calc(-1 * (var(--neu-ctr-osmx) / 2)) calc(-1 * (var(--neu-ctr-osmx) / 2)) var(--neu-ctr-osmx) var(--neu-ctr-br-clr);
+  -webkit-box-shadow: calc(var(--neu-ctr-osmx) / 2) calc(var(--neu-ctr-osmx) / 2) var(--neu-ctr-osmx) 0px var(--neu-ctr-tl-clr), calc(-1 * (var(--neu-ctr-osmx) / 2)) calc(-1 * (var(--neu-ctr-osmx) / 2)) var(--neu-ctr-osmx) 0px var(--neu-ctr-br-clr);
+          box-shadow: calc(var(--neu-ctr-osmx) / 2) calc(var(--neu-ctr-osmx) / 2) var(--neu-ctr-osmx) 0px var(--neu-ctr-tl-clr), calc(-1 * (var(--neu-ctr-osmx) / 2)) calc(-1 * (var(--neu-ctr-osmx) / 2)) var(--neu-ctr-osmx) 0px var(--neu-ctr-br-clr);
 }
 
 .shadow__neu__volt--box.inset {
-  -webkit-box-shadow: inset calc(var(--neu-ctr-osmx) / 2) calc(var(--neu-ctr-osmx) / 2) var(--neu-ctr-osmx) var(--neu-ctr-tl-clr), inset calc(-1 * (var(--neu-ctr-osmx) / 2)) calc(-1 * (var(--neu-ctr-osmx) / 2)) var(--neu-ctr-osmx) var(--neu-ctr-br-clr);
-          box-shadow: inset calc(var(--neu-ctr-osmx) / 2) calc(var(--neu-ctr-osmx) / 2) var(--neu-ctr-osmx) var(--neu-ctr-tl-clr), inset calc(-1 * (var(--neu-ctr-osmx) / 2)) calc(-1 * (var(--neu-ctr-osmx) / 2)) var(--neu-ctr-osmx) var(--neu-ctr-br-clr);
+  -webkit-box-shadow: inset calc(var(--neu-ctr-osmx) / 2) calc(var(--neu-ctr-osmx) / 2) var(--neu-ctr-osmx) 0px var(--neu-ctr-tl-clr), inset calc(-1 * (var(--neu-ctr-osmx) / 2)) calc(-1 * (var(--neu-ctr-osmx) / 2)) var(--neu-ctr-osmx) 0px var(--neu-ctr-br-clr);
+          box-shadow: inset calc(var(--neu-ctr-osmx) / 2) calc(var(--neu-ctr-osmx) / 2) var(--neu-ctr-osmx) 0px var(--neu-ctr-tl-clr), inset calc(-1 * (var(--neu-ctr-osmx) / 2)) calc(-1 * (var(--neu-ctr-osmx) / 2)) var(--neu-ctr-osmx) 0px var(--neu-ctr-br-clr);
 }
 
 .shadow__neu__volt--radio {
@@ -323,8 +323,8 @@ html {
   border-radius: 20px;
   background-color: var(--neu-radio-bg-clr);
   border: solid var(--neu-radio-bdr-sz) var(--neu-radio-bdr-clr);
-  -webkit-box-shadow: calc(var(--neu-radio-osmx) / 2) calc(var(--neu-radio-osmx) / 2) var(--neu-radio-osmx) var(--neu-radio-tl-clr), calc(-1 * (var(--neu-radio-osmx) / 2)) calc(-1 * (var(--neu-radio-osmx) / 2)) var(--neu-radio-osmx) var(--neu-radio-br-clr);
-          box-shadow: calc(var(--neu-radio-osmx) / 2) calc(var(--neu-radio-osmx) / 2) var(--neu-radio-osmx) var(--neu-radio-tl-clr), calc(-1 * (var(--neu-radio-osmx) / 2)) calc(-1 * (var(--neu-radio-osmx) / 2)) var(--neu-radio-osmx) var(--neu-radio-br-clr);
+  -webkit-box-shadow: calc(var(--neu-radio-osmx) / 2) calc(var(--neu-radio-osmx) / 2) var(--neu-radio-osmx) 0px var(--neu-radio-tl-clr), calc(-1 * (var(--neu-radio-osmx) / 2)) calc(-1 * (var(--neu-radio-osmx) / 2)) var(--neu-radio-osmx) 0px var(--neu-radio-br-clr);
+          box-shadow: calc(var(--neu-radio-osmx) / 2) calc(var(--neu-radio-osmx) / 2) var(--neu-radio-osmx) 0px var(--neu-radio-tl-clr), calc(-1 * (var(--neu-radio-osmx) / 2)) calc(-1 * (var(--neu-radio-osmx) / 2)) var(--neu-radio-osmx) 0px var(--neu-radio-br-clr);
 }
 
 .shadow__neu__volt--radio:before {
@@ -340,8 +340,8 @@ html {
   border-radius: 100%;
   background-color: var(--neu-radio-btn-bg-clr);
   border: solid var(--neu-radio-btn-bdr-sz) var(--neu-radio-btn-bdr-clr);
-  -webkit-box-shadow: calc(var(--neu-radio-btn-osmx) / 2) calc(var(--neu-radio-btn-osmx) / 2) var(--neu-radio-btn-osmx) var(--neu-radio-btn-tl-clr), calc(-1 * (var(--neu-radio-btn-osmx) / 2)) calc(-1 * (var(--neu-radio-btn-osmx) / 2)) var(--neu-radio-btn-osmx) var(--neu-radio-btn-br-clr);
-          box-shadow: calc(var(--neu-radio-btn-osmx) / 2) calc(var(--neu-radio-btn-osmx) / 2) var(--neu-radio-btn-osmx) var(--neu-radio-btn-tl-clr), calc(-1 * (var(--neu-radio-btn-osmx) / 2)) calc(-1 * (var(--neu-radio-btn-osmx) / 2)) var(--neu-radio-btn-osmx) var(--neu-radio-btn-br-clr);
+  -webkit-box-shadow: calc(var(--neu-radio-btn-osmx) / 2) calc(var(--neu-radio-btn-osmx) / 2) var(--neu-radio-btn-osmx) 0px var(--neu-radio-btn-tl-clr), calc(-1 * (var(--neu-radio-btn-osmx) / 2)) calc(-1 * (var(--neu-radio-btn-osmx) / 2)) var(--neu-radio-btn-osmx) 0px var(--neu-radio-btn-br-clr);
+          box-shadow: calc(var(--neu-radio-btn-osmx) / 2) calc(var(--neu-radio-btn-osmx) / 2) var(--neu-radio-btn-osmx) 0px var(--neu-radio-btn-tl-clr), calc(-1 * (var(--neu-radio-btn-osmx) / 2)) calc(-1 * (var(--neu-radio-btn-osmx) / 2)) var(--neu-radio-btn-osmx) 0px var(--neu-radio-btn-br-clr);
 }
 
 .shadow__neu__volt--radio.on {
@@ -353,8 +353,8 @@ html {
 }
 
 .shadow__neu__volt--radio.inset {
-  -webkit-box-shadow: inset calc(var(--neu-radio-osmx) / 2) calc(var(--neu-radio-osmx) / 2) var(--neu-radio-osmx) var(--neu-radio-tl-clr), inset calc(-1 * (var(--neu-radio-osmx) / 2)) calc(-1 * (var(--neu-radio-osmx) / 2)) var(--neu-radio-osmx) var(--neu-radio-br-clr);
-          box-shadow: inset calc(var(--neu-radio-osmx) / 2) calc(var(--neu-radio-osmx) / 2) var(--neu-radio-osmx) var(--neu-radio-tl-clr), inset calc(-1 * (var(--neu-radio-osmx) / 2)) calc(-1 * (var(--neu-radio-osmx) / 2)) var(--neu-radio-osmx) var(--neu-radio-br-clr);
+  -webkit-box-shadow: inset calc(var(--neu-radio-osmx) / 2) calc(var(--neu-radio-osmx) / 2) var(--neu-radio-osmx) 0px var(--neu-radio-tl-clr), inset calc(-1 * (var(--neu-radio-osmx) / 2)) calc(-1 * (var(--neu-radio-osmx) / 2)) var(--neu-radio-osmx) 0px var(--neu-radio-br-clr);
+          box-shadow: inset calc(var(--neu-radio-osmx) / 2) calc(var(--neu-radio-osmx) / 2) var(--neu-radio-osmx) 0px var(--neu-radio-tl-clr), inset calc(-1 * (var(--neu-radio-osmx) / 2)) calc(-1 * (var(--neu-radio-osmx) / 2)) var(--neu-radio-osmx) 0px var(--neu-radio-br-clr);
 }
 
 body {
