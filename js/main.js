@@ -6,6 +6,7 @@ let switchFavIcon = (state) => {
 	if (!favIcon) {
 		favIcon = document.createElement("link");
 		favIcon.rel = "icon";
+        favIcon.type = "image/x-icon";
 		document.getElementsByTagName("head")[0].appendChild(favIcon);
 	}
 	favIcon.href = state == "light" ? favIconLight : favIconDark;
