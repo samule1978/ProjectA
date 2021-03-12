@@ -63,12 +63,12 @@ html {
 					width: 16px;
 					left: 0;
 					top: 0;
-					margin: 1px;
+					margin: 2px;
 
 					@include neuShadow(
 						100%,
 						var(--neu-radio-btn-bg-clr),
-						1px,
+						0px,
 						var(--neu-radio-btn-bdr-clr),
 						var(--neu-radio-btn-osm),
 						var(--neu-radio-btn-tl-spread),
