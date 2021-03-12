@@ -32,25 +32,25 @@
 			--neu-ctr-tl-spread: 0px;
 			--neu-ctr-br-spread: 0px;
 			--neu-ctr-bg-clr: var(--clr-volt);
-			--neu-ctr-bdr-clr: rgba(221, 252, 110, 0.7);
-			--neu-ctr-tl-clr: #bde03f;
-			--neu-ctr-br-clr: rgba(224, 255, 111, 1);
+			--neu-ctr-bdr-clr: rgba(221, 252, 110, 1);
+			--neu-ctr-tl-clr: rgba(224, 255, 111, 0.7);
+			--neu-ctr-br-clr: #bde03f;
 
 			--neu-radio-osm: 4px;
 			--neu-radio-tl-spread: 0px;
 			--neu-radio-br-spread: 0px;
 			--neu-radio-bg-clr: rgba(0, 0, 0, 0);
 			--neu-radio-bdr-clr: rgba(221, 252, 110, 0.7);
-			--neu-radio-tl-clr: #bde03f;
-			--neu-radio-br-clr: rgba(255, 255, 255, 0.4);
+			--neu-radio-tl-clr: rgba(255, 255, 255, 0.4);
+			--neu-radio-br-clr: #bde03f;
 
 			--neu-radio-btn-osm: 4px;
 			--neu-radio-btn-tl-spread: 0px;
 			--neu-radio-btn-br-spread: 0px;
 			--neu-radio-btn-bg-clr: var(--clr-black);
 			--neu-radio-btn-bdr-clr: var(--clr-volt);
-			--neu-radio-btn-tl-clr: #bde03f;
-			--neu-radio-btn-br-clr: rgba(255, 255, 255, 0.4);
+			--neu-radio-btn-tl-clr: rgba(255, 255, 255, 0.4);
+			--neu-radio-btn-br-clr: #bde03f;
 		}
 
 		/* Dark Mode Theme */
@@ -62,28 +62,28 @@
 			--clr-logo-secondary: var(--clr-volt);
 
 			--neu-ctr-osm: 20px;
-			--neu-ctr-tl-spread: 20px;
-			--neu-ctr-br-spread: 20px;
+			--neu-ctr-tl-spread: 5px;
+			--neu-ctr-br-spread: 0px;
 			--neu-ctr-bg-clr: var(--clr-black);
-			--neu-ctr-bdr-clr: rgba(30, 30, 30, 0.2);
-			--neu-ctr-tl-clr: rgba(30, 30, 30, 0.2);
-			--neu-ctr-br-clr: rgba(30, 30, 30, 0.4);
+			--neu-ctr-bdr-clr: rgba(100, 100, 100, 0.1);
+			--neu-ctr-tl-clr: rgba(100, 100, 100, 0.3);
+			--neu-ctr-br-clr: rgba(100, 100, 100, 0.2);
 
 			--neu-radio-osm: 6px;
 			--neu-radio-tl-spread: 0px;
 			--neu-radio-br-spread: 0px;
 			--neu-radio-bg-clr: rgba(0, 0, 0, 0.3);
-			--neu-radio-bdr-clr: rgba(95, 95, 95, 0.2);
-			--neu-radio-tl-clr: rgba(95, 95, 95, 0.2);
-			--neu-radio-br-clr: rgba(95, 95, 95, 0.6);
+			--neu-radio-bdr-clr: rgba(100, 100, 100, 0.2);
+			--neu-radio-tl-clr: rgba(100, 100, 100, 0.6);
+			--neu-radio-br-clr: rgba(100, 100, 100, 0.2);
 
 			--neu-radio-btn-osm: 4px;
 			--neu-radio-btn-tl-spread: 0px;
 			--neu-radio-btn-br-spread: 0px;
 			--neu-radio-btn-bg-clr: var(--clr-volt);
 			--neu-radio-btn-bdr-clr: var(--clr-black);
-			--neu-radio-btn-tl-clr: rgba(50, 50, 50, 0.2);
-			--neu-radio-btn-br-clr: rgba(50, 50, 50, 0.7);
+			--neu-radio-btn-tl-clr: rgba(50, 50, 50, 0.7);
+			--neu-radio-btn-br-clr: rgba(50, 50, 50, 0.2);
 		}
 	}
 }

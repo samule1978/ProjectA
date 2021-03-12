@@ -20,28 +20,10 @@
 		border: solid $borderSize $borderColor;
 	}
 	@if $inset {
-		box-shadow: inset
-				calc(#{$offSetMax} / 2)
-				calc(#{$offSetMax} / 2)
-				$offSetMax
-                $topLeftSpread
-				$topLeftBlurColor,
-			inset
-				calc(-1 * (#{$offSetMax} / 2))
-				calc(-1 * (#{$offSetMax} / 2))
-				$offSetMax
-                $bottomRightSpread
-				$bottomRightBlurColor;
+		box-shadow: inset calc(#{$offSetMax} / 2) calc(#{$offSetMax} / 2) $offSetMax $bottomRightSpread $bottomRightBlurColor,
+			        inset calc(-1 * (#{$offSetMax} / 2)) calc(-1 * (#{$offSetMax} / 2)) $offSetMax $topLeftSpread $topLeftBlurColor;
 	} @else {
-		box-shadow: calc(#{$offSetMax} / 2)
-				calc(#{$offSetMax} / 2)
-				$offSetMax
-                $topLeftSpread
-				$topLeftBlurColor,
-			calc(-1 * (#{$offSetMax} / 2))
-				calc(-1 * (#{$offSetMax} / 2))
-				$offSetMax
-                $bottomRightSpread
-				$bottomRightBlurColor;
+		box-shadow: calc(#{$offSetMax} / 2) calc(#{$offSetMax} / 2) $offSetMax $bottomRightSpread $bottomRightBlurColor,
+			        calc(-1 * (#{$offSetMax} / 2)) calc(-1 * (#{$offSetMax} / 2)) $offSetMax $topLeftSpread $topLeftBlurColor;
 	}
 }
