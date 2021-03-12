@@ -12,4 +12,3 @@ let toggleOnOff = (element) => {
 };
 //const radioBtns = [...document.querySelectorAll(`[class^="--radio"]`)];
 //radioBtns.addEventListener("click", () => toggleOnOff(radioBtn));
-

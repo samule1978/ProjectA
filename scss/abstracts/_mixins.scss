@@ -1,1 +1,41 @@
-
+@mixin neuShadow(
+	$borderRadius,
+	$backgroundColor,
+	$borderSize,
+	$borderColor,
+	$pxOffSetMax,
+	$topLeftBlurColor,
+	$bottomRightBlurColor,
+	$inset: false
+) {
+	@if $borderRadius {
+		border-radius: $borderRadius;
+	}
+	@if $backgroundColor {
+		background-color: $backgroundColor;
+	}
+	@if $borderSize and $borderColor {
+		border: solid $borderSize $borderColor;
+	}
+	@if $inset {
+		box-shadow: inset
+				calc(#{$pxOffSetMax} / 2)
+				calc(#{$pxOffSetMax} / 2)
+				$pxOffSetMax
+				$topLeftBlurColor,
+			inset
+				calc(-1 * (#{$pxOffSetMax} / 2))
+				calc(-1 * (#{$pxOffSetMax} / 2))
+				$pxOffSetMax
+				$bottomRightBlurColor;
+	} @else {
+		box-shadow: calc(#{$pxOffSetMax} / 2)
+				calc(#{$pxOffSetMax} / 2)
+				$pxOffSetMax
+				$topLeftBlurColor,
+			calc(-1 * (#{$pxOffSetMax} / 2))
+				calc(-1 * (#{$pxOffSetMax} / 2))
+				$pxOffSetMax
+				$bottomRightBlurColor;
+	}
+}

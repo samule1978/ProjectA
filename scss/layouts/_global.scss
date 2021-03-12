@@ -5,66 +5,94 @@ html {
 .shadow {
 	&__neu {
 		&__volt {
-			&--container {
-				background-color: var(--neu-container-bg-clr);
-				border-radius: 17px;
-				border: var(--neu-container-bdr);				
-				box-shadow: var(--neu-container-bxsdw);
+			&--box {
+				@include neuShadow(
+					17px,
+					var(--neu-ctr-bg-clr),
+					var(--neu-ctr-bdr-sz),
+					var(--neu-ctr-bdr-clr),
+					var(--neu-ctr-osmx),
+					var(--neu-ctr-tl-clr),
+					var(--neu-ctr-br-clr)
+				);
+
 				&.inset {
-					box-shadow: var(--neu-container-bxsdw-inset);
+					@include neuShadow(
+						null,
+						null,
+						null,
+						null,
+						var(--neu-ctr-osmx),
+						var(--neu-ctr-tl-clr),
+						var(--neu-ctr-br-clr),
+						true
+					);
 				}
 			}
-			&--radio {
-				cursor: pointer;
 
-				background-color: rgba(0, 0, 0, 0);
+			&--radio {
 				transition: background-color 100ms var(--cb-smooth) 50ms;
+
+				cursor: pointer;
 
 				width: 35px;
 				height: 20px;
-				border: var(--neu-radio-bdr);
-				border-radius: 20px;
-				box-shadow: 3px 3px 6px var(--clr-neu-shadow-br),
-					-3px -3px 6px rgba(255, 255, 255, 1);
+				@include neuShadow(
+					20px,
+					var(--neu-radio-bg-clr),
+					var(--neu-radio-bdr-sz),
+					var(--neu-radio-bdr-clr),
+					var(--neu-radio-osmx),
+					var(--neu-radio-tl-clr),
+					var(--neu-radio-br-clr)
+				);
 
 				&:before {
 					content: "";
-					height: 16px;
-					width: 16px;
-					position: absolute;
 
-					left: 0;
 					transition: left 150ms var(--cb-smooth);
 
+					position: absolute;
+					height: 16px;
+					width: 16px;
+					left: 0;
 					top: 0;
 					margin: 1px;
-					border-radius: 100%;
-					border: solid 1px var(--clr-radio-bdr);
-					background-color: var(--clr-radio-bg);
-					box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8),
-						-2px -2px 4px var(--clr-neu-shadow-br);
-				}
 
-				&.inset {
-					&:before {
-						box-shadow: 1px 1px 2px var(--clr-neu-shadow-br),
-							-1px -1px 2px rgba(255, 255, 255, 0.4);
-					}
-
-					box-shadow: var(--clr-radio-shadow);
-
-					&.on {
-						box-shadow: var(--clr-radio-shadow);
-					}
+					@include neuShadow(
+						100%,
+						var(--neu-radio-btn-bg-clr),
+						var(--neu-radio-btn-bdr-sz),
+						var(--neu-radio-btn-bdr-clr),
+						var(--neu-radio-btn-osmx),
+						var(--neu-radio-btn-tl-clr),
+						var(--neu-radio-btn-br-clr)
+					);
 				}
 
 				&.on {
-					background-color: rgba(0, 0, 0, 0.7);
+					background-color: rgba(0, 0, 0, 0.3);
 
 					&:before {
 						left: 15px;
-						box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5),
-							-1px -1px 2px rgba(255, 255, 255, 0.5);
+					}
+				}
+
+				&.inset {
+					@include neuShadow(
+						null,
+						null,
+						null,
+						null,
+						var(--neu-radio-osmx),
+						var(--neu-radio-tl-clr),
+						var(--neu-radio-br-clr),
+						true
+					);
+
+					&.on {
+						&:before {
+						}
 					}
 				}
 			}
@@ -107,7 +135,7 @@ body {
 
 	max-width: var(--body-max-width);
 	min-height: 500px;
-	//height: calc(100vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
+	height: calc(80vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
 	margin: 0 auto;
 	padding: 0;
 	position: relative;
@@ -141,8 +169,6 @@ body {
 			#Logo_78 {
 				transition: fill 500ms var(--cb-smooth);
 				fill: var(--clr-logo-primary) !important;
-				path {
-				}
 			}
 			#Logo_G {
 				path {

@@ -46,45 +46,60 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
 }
 
 :root .mode {
-  /* Light Mode Colours */
-  /* Dark Mode Colours */
+  /* Light Mode Theme */
+  /* Dark Mode Theme */
 }
 
 :root .mode--light {
   --clr-body-bg: var(--clr-volt);
   --clr-body: var(--clr-black);
-  --neu-container-bg-clr: var(--clr-volt);
-  --neu-container-bdr: solid 1px rgba(221, 252, 110, 0.7);
-  --neu-container-bxsdw: 10px 10px 20px #bde03f,	-10px -10px 20px rgb(224, 255, 111);
-  --neu-container-bxsdw-inset: inset 10px 10px 20px #bde03f, inset -10px -10px 20px rgb(224, 255, 111);
-  --neu-radio-bdr: solid 1px rgba(221, 252, 110, 0.7);
-  --clr-neu-shadow-tl: rgb(224, 255, 111);
-  --clr-neu-shadow-br: #bde03f;
-  --clr-neu-shadow-border: rgba(221, 252, 110, 0.7);
   --clr-logo-bg: var(--clr-black);
   --clr-logo-primary: var(--clr-volt);
   --clr-logo-secondary: var(--clr-black);
-  --clr-radio-bdr: var(--clr-volt);
-  --clr-radio-bg: var(--clr-black);
-  --clr-radio-shadow: inset 1px 1px 2px var(--clr-neu-shadow-br), inset -1px -1px 2px rgba(255, 255, 255, 0.4);
+  --neu-ctr-bg-clr: var(--clr-volt);
+  --neu-ctr-bdr-sz: 1px;
+  --neu-ctr-bdr-clr: rgba(221, 252, 110, 0.7);
+  --neu-ctr-osmx: 20px;
+  --neu-ctr-tl-clr: #bde03f;
+  --neu-ctr-br-clr: rgba(224, 255, 111, 1);
+  --neu-radio-bg-clr: rgba(0, 0, 0, 0);
+  --neu-radio-bdr-sz: 1px;
+  --neu-radio-bdr-clr: rgba(221, 252, 110, 0.7);
+  --neu-radio-osmx: 4px;
+  --neu-radio-tl-clr: #bde03f;
+  --neu-radio-br-clr: rgba(255, 255, 255, 0.4);
+  --neu-radio-btn-bg-clr: var(--clr-black);
+  --neu-radio-btn-bdr-sz: 1px;
+  --neu-radio-btn-bdr-clr: var(--clr-volt);
+  --neu-radio-btn-osmx: 4px;
+  --neu-radio-btn-tl-clr: #bde03f;
+  --neu-radio-btn-br-clr: rgba(255, 255, 255, 0.4);
 }
 
 :root .mode--dark {
   --clr-body-bg: var(--clr-black);
   --clr-body: var(--clr-volt);
-  --neu-container-bg-clr: var(--clr-black);
-  --neu-container-bdr: solid 1px rgba(30, 30, 30, 0.4);
-  --neu-container-bxsdw: 10px 10px 20px rgba(30, 30, 30, 0.4), -10px -10px 20px rgba(30, 30, 30, 0.7);
-  --neu-container-bxsdw-inset: inset 10px 10px 20px rgba(30, 30, 30, 0.4), inset -10px -10px 20px rgba(30, 30, 30, 0.7);
-  --clr-neu-shadow-tl: rgba(30, 30, 30, 0.7);
-  --clr-neu-shadow-br: rgba(30, 30, 30, 0.4);
-  --clr-neu-shadow-border: rgba(30, 30, 30, 0.7);
   --clr-logo-bg: var(--clr-volt);
   --clr-logo-primary: var(--clr-black);
   --clr-logo-secondary: var(--clr-volt);
-  --clr-radio-bdr: var(--clr-black);
-  --clr-radio-bg: var(--clr-volt);
-  --clr-radio-shadow: inset 1px 1px 2px var(--clr-neu-shadow-br), inset -1px -1px 2px rgba(255, 255, 255, 0.4);
+  --neu-ctr-bg-clr: var(--clr-black);
+  --neu-ctr-bdr-sz: 1px;
+  --neu-ctr-bdr-clr: rgba(30, 30, 30, 0.4);
+  --neu-ctr-osmx: 20px;
+  --neu-ctr-tl-clr: rgba(30, 30, 30, 0.4);
+  --neu-ctr-br-clr: rgba(30, 30, 30, 0.7);
+  --neu-radio-bg-clr: rgba(0, 0, 0, 0);
+  --neu-radio-bdr-sz: 1px;
+  --neu-radio-bdr-clr: rgba(50, 50, 50, 0.5);
+  --neu-radio-osmx: 4px;
+  --neu-radio-tl-clr: rgba(50, 50, 50, 0.2);
+  --neu-radio-br-clr: rgba(50, 50, 50, 0.7);
+  --neu-radio-btn-bg-clr: var(--clr-volt);
+  --neu-radio-btn-bdr-sz: 1px;
+  --neu-radio-btn-bdr-clr: var(--clr-black);
+  --neu-radio-btn-osmx: 4px;
+  --neu-radio-btn-tl-clr: rgba(50, 50, 50, 0.2);
+  --neu-radio-btn-br-clr: rgba(50, 50, 50, 0.7);
 }
 
 @-webkit-keyframes fontbulger {
@@ -286,72 +301,60 @@ html {
   scroll-behavior: smooth;
 }
 
-.shadow__neu__volt--container {
-  background-color: var(--neu-container-bg-clr);
+.shadow__neu__volt--box {
   border-radius: 17px;
-  border: var(--neu-container-bdr);
-  -webkit-box-shadow: var(--neu-container-bxsdw);
-          box-shadow: var(--neu-container-bxsdw);
+  background-color: var(--neu-ctr-bg-clr);
+  border: solid var(--neu-ctr-bdr-sz) var(--neu-ctr-bdr-clr);
+  -webkit-box-shadow: calc(var(--neu-ctr-osmx) / 2) calc(var(--neu-ctr-osmx) / 2) var(--neu-ctr-osmx) var(--neu-ctr-tl-clr), calc(-1 * (var(--neu-ctr-osmx) / 2)) calc(-1 * (var(--neu-ctr-osmx) / 2)) var(--neu-ctr-osmx) var(--neu-ctr-br-clr);
+          box-shadow: calc(var(--neu-ctr-osmx) / 2) calc(var(--neu-ctr-osmx) / 2) var(--neu-ctr-osmx) var(--neu-ctr-tl-clr), calc(-1 * (var(--neu-ctr-osmx) / 2)) calc(-1 * (var(--neu-ctr-osmx) / 2)) var(--neu-ctr-osmx) var(--neu-ctr-br-clr);
 }
 
-.shadow__neu__volt--container.inset {
-  -webkit-box-shadow: var(--neu-container-bxsdw-inset);
-          box-shadow: var(--neu-container-bxsdw-inset);
+.shadow__neu__volt--box.inset {
+  -webkit-box-shadow: inset calc(var(--neu-ctr-osmx) / 2) calc(var(--neu-ctr-osmx) / 2) var(--neu-ctr-osmx) var(--neu-ctr-tl-clr), inset calc(-1 * (var(--neu-ctr-osmx) / 2)) calc(-1 * (var(--neu-ctr-osmx) / 2)) var(--neu-ctr-osmx) var(--neu-ctr-br-clr);
+          box-shadow: inset calc(var(--neu-ctr-osmx) / 2) calc(var(--neu-ctr-osmx) / 2) var(--neu-ctr-osmx) var(--neu-ctr-tl-clr), inset calc(-1 * (var(--neu-ctr-osmx) / 2)) calc(-1 * (var(--neu-ctr-osmx) / 2)) var(--neu-ctr-osmx) var(--neu-ctr-br-clr);
 }
 
 .shadow__neu__volt--radio {
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0);
   -webkit-transition: background-color 100ms var(--cb-smooth) 50ms;
   transition: background-color 100ms var(--cb-smooth) 50ms;
+  cursor: pointer;
   width: 35px;
   height: 20px;
-  border: var(--neu-radio-bdr);
   border-radius: 20px;
-  -webkit-box-shadow: 3px 3px 6px var(--clr-neu-shadow-br), -3px -3px 6px white;
-          box-shadow: 3px 3px 6px var(--clr-neu-shadow-br), -3px -3px 6px white;
+  background-color: var(--neu-radio-bg-clr);
+  border: solid var(--neu-radio-bdr-sz) var(--neu-radio-bdr-clr);
+  -webkit-box-shadow: calc(var(--neu-radio-osmx) / 2) calc(var(--neu-radio-osmx) / 2) var(--neu-radio-osmx) var(--neu-radio-tl-clr), calc(-1 * (var(--neu-radio-osmx) / 2)) calc(-1 * (var(--neu-radio-osmx) / 2)) var(--neu-radio-osmx) var(--neu-radio-br-clr);
+          box-shadow: calc(var(--neu-radio-osmx) / 2) calc(var(--neu-radio-osmx) / 2) var(--neu-radio-osmx) var(--neu-radio-tl-clr), calc(-1 * (var(--neu-radio-osmx) / 2)) calc(-1 * (var(--neu-radio-osmx) / 2)) var(--neu-radio-osmx) var(--neu-radio-br-clr);
 }
 
 .shadow__neu__volt--radio:before {
   content: "";
-  height: 16px;
-  width: 16px;
-  position: absolute;
-  left: 0;
   -webkit-transition: left 150ms var(--cb-smooth);
   transition: left 150ms var(--cb-smooth);
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 0;
   top: 0;
   margin: 1px;
   border-radius: 100%;
-  border: solid 1px var(--clr-radio-bdr);
-  background-color: var(--clr-radio-bg);
-  -webkit-box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8), -2px -2px 4px var(--clr-neu-shadow-br);
-          box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8), -2px -2px 4px var(--clr-neu-shadow-br);
-}
-
-.shadow__neu__volt--radio.inset {
-  -webkit-box-shadow: var(--clr-radio-shadow);
-          box-shadow: var(--clr-radio-shadow);
-}
-
-.shadow__neu__volt--radio.inset:before {
-  -webkit-box-shadow: 1px 1px 2px var(--clr-neu-shadow-br), -1px -1px 2px rgba(255, 255, 255, 0.4);
-          box-shadow: 1px 1px 2px var(--clr-neu-shadow-br), -1px -1px 2px rgba(255, 255, 255, 0.4);
-}
-
-.shadow__neu__volt--radio.inset.on {
-  -webkit-box-shadow: var(--clr-radio-shadow);
-          box-shadow: var(--clr-radio-shadow);
+  background-color: var(--neu-radio-btn-bg-clr);
+  border: solid var(--neu-radio-btn-bdr-sz) var(--neu-radio-btn-bdr-clr);
+  -webkit-box-shadow: calc(var(--neu-radio-btn-osmx) / 2) calc(var(--neu-radio-btn-osmx) / 2) var(--neu-radio-btn-osmx) var(--neu-radio-btn-tl-clr), calc(-1 * (var(--neu-radio-btn-osmx) / 2)) calc(-1 * (var(--neu-radio-btn-osmx) / 2)) var(--neu-radio-btn-osmx) var(--neu-radio-btn-br-clr);
+          box-shadow: calc(var(--neu-radio-btn-osmx) / 2) calc(var(--neu-radio-btn-osmx) / 2) var(--neu-radio-btn-osmx) var(--neu-radio-btn-tl-clr), calc(-1 * (var(--neu-radio-btn-osmx) / 2)) calc(-1 * (var(--neu-radio-btn-osmx) / 2)) var(--neu-radio-btn-osmx) var(--neu-radio-btn-br-clr);
 }
 
 .shadow__neu__volt--radio.on {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .shadow__neu__volt--radio.on:before {
   left: 15px;
-  -webkit-box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.5);
-          box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.shadow__neu__volt--radio.inset {
+  -webkit-box-shadow: inset calc(var(--neu-radio-osmx) / 2) calc(var(--neu-radio-osmx) / 2) var(--neu-radio-osmx) var(--neu-radio-tl-clr), inset calc(-1 * (var(--neu-radio-osmx) / 2)) calc(-1 * (var(--neu-radio-osmx) / 2)) var(--neu-radio-osmx) var(--neu-radio-br-clr);
+          box-shadow: inset calc(var(--neu-radio-osmx) / 2) calc(var(--neu-radio-osmx) / 2) var(--neu-radio-osmx) var(--neu-radio-tl-clr), inset calc(-1 * (var(--neu-radio-osmx) / 2)) calc(-1 * (var(--neu-radio-osmx) / 2)) var(--neu-radio-osmx) var(--neu-radio-br-clr);
 }
 
 body {
@@ -373,6 +376,7 @@ body {
   transition: all 500ms var(--cb-smooth);
   max-width: var(--body-max-width);
   min-height: 500px;
+  height: calc(80vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
   margin: 0 auto;
   padding: 0;
   position: relative;
