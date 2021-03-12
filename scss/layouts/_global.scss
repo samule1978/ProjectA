@@ -11,10 +11,10 @@ html {
 					var(--neu-ctr-bg-clr),
 					1px,
 					var(--neu-ctr-bdr-clr),
-					20px,
-					0px,
+					var(--neu-ctr-osm),
+					var(--neu-ctr-tl-spread),
 					var(--neu-ctr-tl-clr),
-					0px,
+					var(--neu-ctr-br-spread),
 					var(--neu-ctr-br-clr)
 				);
 
@@ -24,10 +24,10 @@ html {
 						null,
 						null,
 						null,
-						20px,
-						0px,
+						var(--neu-ctr-osm),
+						var(--neu-ctr-tl-spread),
 						var(--neu-ctr-tl-clr),
-						0px,
+						var(--neu-ctr-br-spread),
 						var(--neu-ctr-br-clr),
 						true
 					);
@@ -46,10 +46,10 @@ html {
 					var(--neu-radio-bg-clr),
 					1px,
 					var(--neu-radio-bdr-clr),
-					4px,
-					0px,
+					var(--neu-radio-osm),
+					var(--neu-radio-tl-spread),
 					var(--neu-radio-tl-clr),
-					0px,
+					var(--neu-radio-br-spread),
 					var(--neu-radio-br-clr)
 				);
 
@@ -70,10 +70,10 @@ html {
 						var(--neu-radio-btn-bg-clr),
 						1px,
 						var(--neu-radio-btn-bdr-clr),
-						4px,
-						0px,
+						var(--neu-radio-btn-osm),
+						var(--neu-radio-btn-tl-spread),
 						var(--neu-radio-btn-tl-clr),
-						0px,
+						var(--neu-radio-btn-bl-spread),
 						var(--neu-radio-btn-br-clr)
 					);
 				}
@@ -92,10 +92,10 @@ html {
 						null,
 						null,
 						null,
-						var(--neu-radio-osmx),
-						0px,
+						var(--neu-radio-osm),
+						var(--neu-radio-tl-spread),
 						var(--neu-radio-tl-clr),
-						0px,
+						var(--neu-radio-br-spread),
 						var(--neu-radio-br-clr),
 						true
 					);

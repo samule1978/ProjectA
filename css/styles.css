@@ -56,14 +56,23 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
   --clr-logo-bg: var(--clr-black);
   --clr-logo-primary: var(--clr-volt);
   --clr-logo-secondary: var(--clr-black);
+  --neu-ctr-osm: 20px;
+  --neu-ctr-tl-spread: 0px;
+  --neu-ctr-br-spread: 0px;
   --neu-ctr-bg-clr: var(--clr-volt);
   --neu-ctr-bdr-clr: rgba(221, 252, 110, 0.7);
   --neu-ctr-tl-clr: #bde03f;
   --neu-ctr-br-clr: rgba(224, 255, 111, 1);
+  --neu-radio-osm: 4px;
+  --neu-radio-tl-spread: 0px;
+  --neu-radio-br-spread: 0px;
   --neu-radio-bg-clr: rgba(0, 0, 0, 0);
   --neu-radio-bdr-clr: rgba(221, 252, 110, 0.7);
   --neu-radio-tl-clr: #bde03f;
   --neu-radio-br-clr: rgba(255, 255, 255, 0.4);
+  --neu-radio-btn-osm: 4px;
+  --neu-radio-btn-tl-spread: 0px;
+  --neu-radio-btn-br-spread: 0px;
   --neu-radio-btn-bg-clr: var(--clr-black);
   --neu-radio-btn-bdr-clr: var(--clr-volt);
   --neu-radio-btn-tl-clr: #bde03f;
@@ -76,14 +85,23 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
   --clr-logo-bg: var(--clr-volt);
   --clr-logo-primary: var(--clr-black);
   --clr-logo-secondary: var(--clr-volt);
+  --neu-ctr-osm: 20px;
+  --neu-ctr-tl-spread: 0px;
+  --neu-ctr-br-spread: 0px;
   --neu-ctr-bg-clr: var(--clr-black);
   --neu-ctr-bdr-clr: rgba(30, 30, 30, 0.4);
   --neu-ctr-tl-clr: rgba(30, 30, 30, 0.4);
   --neu-ctr-br-clr: rgba(30, 30, 30, 0.7);
+  --neu-radio-osm: 4px;
+  --neu-radio-tl-spread: 0px;
+  --neu-radio-br-spread: 0px;
   --neu-radio-bg-clr: rgba(0, 0, 0, 0);
   --neu-radio-bdr-clr: rgba(50, 50, 50, 0.5);
   --neu-radio-tl-clr: rgba(50, 50, 50, 0.2);
   --neu-radio-br-clr: rgba(50, 50, 50, 0.7);
+  --neu-radio-btn-osm: 4px;
+  --neu-radio-btn-tl-spread: 0px;
+  --neu-radio-btn-br-spread: 0px;
   --neu-radio-btn-bg-clr: var(--clr-volt);
   --neu-radio-btn-bdr-clr: var(--clr-black);
   --neu-radio-btn-tl-clr: rgba(50, 50, 50, 0.2);
@@ -293,13 +311,13 @@ html {
   border-radius: 17px;
   background-color: var(--neu-ctr-bg-clr);
   border: solid 1px var(--neu-ctr-bdr-clr);
-  -webkit-box-shadow: calc(20px / 2) calc(20px / 2) 20px 0px var(--neu-ctr-tl-clr), calc(-1 * (20px / 2)) calc(-1 * (20px / 2)) 20px 0px var(--neu-ctr-br-clr);
-          box-shadow: calc(20px / 2) calc(20px / 2) 20px 0px var(--neu-ctr-tl-clr), calc(-1 * (20px / 2)) calc(-1 * (20px / 2)) 20px 0px var(--neu-ctr-br-clr);
+  -webkit-box-shadow: calc(var(--neu-ctr-osm) / 2) calc(var(--neu-ctr-osm) / 2) var(--neu-ctr-osm) var(--neu-ctr-tl-spread) var(--neu-ctr-tl-clr), calc(-1 * (var(--neu-ctr-osm) / 2)) calc(-1 * (var(--neu-ctr-osm) / 2)) var(--neu-ctr-osm) var(--neu-ctr-br-spread) var(--neu-ctr-br-clr);
+          box-shadow: calc(var(--neu-ctr-osm) / 2) calc(var(--neu-ctr-osm) / 2) var(--neu-ctr-osm) var(--neu-ctr-tl-spread) var(--neu-ctr-tl-clr), calc(-1 * (var(--neu-ctr-osm) / 2)) calc(-1 * (var(--neu-ctr-osm) / 2)) var(--neu-ctr-osm) var(--neu-ctr-br-spread) var(--neu-ctr-br-clr);
 }
 
 .shadow__neu__volt--box.inset {
-  -webkit-box-shadow: inset calc(20px / 2) calc(20px / 2) 20px 0px var(--neu-ctr-tl-clr), inset calc(-1 * (20px / 2)) calc(-1 * (20px / 2)) 20px 0px var(--neu-ctr-br-clr);
-          box-shadow: inset calc(20px / 2) calc(20px / 2) 20px 0px var(--neu-ctr-tl-clr), inset calc(-1 * (20px / 2)) calc(-1 * (20px / 2)) 20px 0px var(--neu-ctr-br-clr);
+  -webkit-box-shadow: inset calc(var(--neu-ctr-osm) / 2) calc(var(--neu-ctr-osm) / 2) var(--neu-ctr-osm) var(--neu-ctr-tl-spread) var(--neu-ctr-tl-clr), inset calc(-1 * (var(--neu-ctr-osm) / 2)) calc(-1 * (var(--neu-ctr-osm) / 2)) var(--neu-ctr-osm) var(--neu-ctr-br-spread) var(--neu-ctr-br-clr);
+          box-shadow: inset calc(var(--neu-ctr-osm) / 2) calc(var(--neu-ctr-osm) / 2) var(--neu-ctr-osm) var(--neu-ctr-tl-spread) var(--neu-ctr-tl-clr), inset calc(-1 * (var(--neu-ctr-osm) / 2)) calc(-1 * (var(--neu-ctr-osm) / 2)) var(--neu-ctr-osm) var(--neu-ctr-br-spread) var(--neu-ctr-br-clr);
 }
 
 .shadow__neu__volt--radio {
@@ -311,8 +329,8 @@ html {
   border-radius: 20px;
   background-color: var(--neu-radio-bg-clr);
   border: solid 1px var(--neu-radio-bdr-clr);
-  -webkit-box-shadow: calc(4px / 2) calc(4px / 2) 4px 0px var(--neu-radio-tl-clr), calc(-1 * (4px / 2)) calc(-1 * (4px / 2)) 4px 0px var(--neu-radio-br-clr);
-          box-shadow: calc(4px / 2) calc(4px / 2) 4px 0px var(--neu-radio-tl-clr), calc(-1 * (4px / 2)) calc(-1 * (4px / 2)) 4px 0px var(--neu-radio-br-clr);
+  -webkit-box-shadow: calc(var(--neu-radio-osm) / 2) calc(var(--neu-radio-osm) / 2) var(--neu-radio-osm) var(--neu-radio-tl-spread) var(--neu-radio-tl-clr), calc(-1 * (var(--neu-radio-osm) / 2)) calc(-1 * (var(--neu-radio-osm) / 2)) var(--neu-radio-osm) var(--neu-radio-br-spread) var(--neu-radio-br-clr);
+          box-shadow: calc(var(--neu-radio-osm) / 2) calc(var(--neu-radio-osm) / 2) var(--neu-radio-osm) var(--neu-radio-tl-spread) var(--neu-radio-tl-clr), calc(-1 * (var(--neu-radio-osm) / 2)) calc(-1 * (var(--neu-radio-osm) / 2)) var(--neu-radio-osm) var(--neu-radio-br-spread) var(--neu-radio-br-clr);
 }
 
 .shadow__neu__volt--radio:before {
@@ -328,8 +346,8 @@ html {
   border-radius: 100%;
   background-color: var(--neu-radio-btn-bg-clr);
   border: solid 1px var(--neu-radio-btn-bdr-clr);
-  -webkit-box-shadow: calc(4px / 2) calc(4px / 2) 4px 0px var(--neu-radio-btn-tl-clr), calc(-1 * (4px / 2)) calc(-1 * (4px / 2)) 4px 0px var(--neu-radio-btn-br-clr);
-          box-shadow: calc(4px / 2) calc(4px / 2) 4px 0px var(--neu-radio-btn-tl-clr), calc(-1 * (4px / 2)) calc(-1 * (4px / 2)) 4px 0px var(--neu-radio-btn-br-clr);
+  -webkit-box-shadow: calc(var(--neu-radio-btn-osm) / 2) calc(var(--neu-radio-btn-osm) / 2) var(--neu-radio-btn-osm) var(--neu-radio-btn-tl-spread) var(--neu-radio-btn-tl-clr), calc(-1 * (var(--neu-radio-btn-osm) / 2)) calc(-1 * (var(--neu-radio-btn-osm) / 2)) var(--neu-radio-btn-osm) var(--neu-radio-btn-bl-spread) var(--neu-radio-btn-br-clr);
+          box-shadow: calc(var(--neu-radio-btn-osm) / 2) calc(var(--neu-radio-btn-osm) / 2) var(--neu-radio-btn-osm) var(--neu-radio-btn-tl-spread) var(--neu-radio-btn-tl-clr), calc(-1 * (var(--neu-radio-btn-osm) / 2)) calc(-1 * (var(--neu-radio-btn-osm) / 2)) var(--neu-radio-btn-osm) var(--neu-radio-btn-bl-spread) var(--neu-radio-btn-br-clr);
 }
 
 .shadow__neu__volt--radio.on {
@@ -341,8 +359,8 @@ html {
 }
 
 .shadow__neu__volt--radio.inset {
-  -webkit-box-shadow: inset calc(var(--neu-radio-osmx) / 2) calc(var(--neu-radio-osmx) / 2) var(--neu-radio-osmx) 0px var(--neu-radio-tl-clr), inset calc(-1 * (var(--neu-radio-osmx) / 2)) calc(-1 * (var(--neu-radio-osmx) / 2)) var(--neu-radio-osmx) 0px var(--neu-radio-br-clr);
-          box-shadow: inset calc(var(--neu-radio-osmx) / 2) calc(var(--neu-radio-osmx) / 2) var(--neu-radio-osmx) 0px var(--neu-radio-tl-clr), inset calc(-1 * (var(--neu-radio-osmx) / 2)) calc(-1 * (var(--neu-radio-osmx) / 2)) var(--neu-radio-osmx) 0px var(--neu-radio-br-clr);
+  -webkit-box-shadow: inset calc(var(--neu-radio-osm) / 2) calc(var(--neu-radio-osm) / 2) var(--neu-radio-osm) var(--neu-radio-tl-spread) var(--neu-radio-tl-clr), inset calc(-1 * (var(--neu-radio-osm) / 2)) calc(-1 * (var(--neu-radio-osm) / 2)) var(--neu-radio-osm) var(--neu-radio-br-spread) var(--neu-radio-br-clr);
+          box-shadow: inset calc(var(--neu-radio-osm) / 2) calc(var(--neu-radio-osm) / 2) var(--neu-radio-osm) var(--neu-radio-tl-spread) var(--neu-radio-tl-clr), inset calc(-1 * (var(--neu-radio-osm) / 2)) calc(-1 * (var(--neu-radio-osm) / 2)) var(--neu-radio-osm) var(--neu-radio-br-spread) var(--neu-radio-br-clr);
 }
 
 body {
