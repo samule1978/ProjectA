@@ -9,11 +9,12 @@ html {
 				@include neuShadow(
 					17px,
 					var(--neu-ctr-bg-clr),
-					var(--neu-ctr-bdr-sz),
+					1px,
 					var(--neu-ctr-bdr-clr),
-					var(--neu-ctr-osmx),
+					20px,
 					0px,
 					var(--neu-ctr-tl-clr),
+					0px,
 					var(--neu-ctr-br-clr)
 				);
 
@@ -23,9 +24,10 @@ html {
 						null,
 						null,
 						null,
-						var(--neu-ctr-osmx),
+						20px,
 						0px,
 						var(--neu-ctr-tl-clr),
+						0px,
 						var(--neu-ctr-br-clr),
 						true
 					);
@@ -42,11 +44,12 @@ html {
 				@include neuShadow(
 					20px,
 					var(--neu-radio-bg-clr),
-					var(--neu-radio-bdr-sz),
+					1px,
 					var(--neu-radio-bdr-clr),
-					var(--neu-radio-osmx),
+					4px,
 					0px,
 					var(--neu-radio-tl-clr),
+					0px,
 					var(--neu-radio-br-clr)
 				);
 
@@ -65,11 +68,12 @@ html {
 					@include neuShadow(
 						100%,
 						var(--neu-radio-btn-bg-clr),
-						var(--neu-radio-btn-bdr-sz),
+						1px,
 						var(--neu-radio-btn-bdr-clr),
-						var(--neu-radio-btn-osmx),
+						4px,
 						0px,
 						var(--neu-radio-btn-tl-clr),
+						0px,
 						var(--neu-radio-btn-br-clr)
 					);
 				}
@@ -91,6 +95,7 @@ html {
 						var(--neu-radio-osmx),
 						0px,
 						var(--neu-radio-tl-clr),
+						0px,
 						var(--neu-radio-br-clr),
 						true
 					);

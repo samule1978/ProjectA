@@ -3,9 +3,10 @@
 	$backgroundColor,
 	$borderSize,
 	$borderColor,
-	$pxOffSetMax,
-    $pxSpread,
+	$offSetMax,
+    $topLeftSpread,
 	$topLeftBlurColor,
+    $bottomRightSpread,
 	$bottomRightBlurColor,
 	$inset: false
 ) {
@@ -20,27 +21,27 @@
 	}
 	@if $inset {
 		box-shadow: inset
-				calc(#{$pxOffSetMax} / 2)
-				calc(#{$pxOffSetMax} / 2)
-				$pxOffSetMax
-                $pxSpread
+				calc(#{$offSetMax} / 2)
+				calc(#{$offSetMax} / 2)
+				$offSetMax
+                $topLeftSpread
 				$topLeftBlurColor,
 			inset
-				calc(-1 * (#{$pxOffSetMax} / 2))
-				calc(-1 * (#{$pxOffSetMax} / 2))
-				$pxOffSetMax
-                $pxSpread
+				calc(-1 * (#{$offSetMax} / 2))
+				calc(-1 * (#{$offSetMax} / 2))
+				$offSetMax
+                $bottomRightSpread
 				$bottomRightBlurColor;
 	} @else {
-		box-shadow: calc(#{$pxOffSetMax} / 2)
-				calc(#{$pxOffSetMax} / 2)
-				$pxOffSetMax
-                $pxSpread
+		box-shadow: calc(#{$offSetMax} / 2)
+				calc(#{$offSetMax} / 2)
+				$offSetMax
+                $topLeftSpread
 				$topLeftBlurColor,
-			calc(-1 * (#{$pxOffSetMax} / 2))
-				calc(-1 * (#{$pxOffSetMax} / 2))
-				$pxOffSetMax
-                $pxSpread
+			calc(-1 * (#{$offSetMax} / 2))
+				calc(-1 * (#{$offSetMax} / 2))
+				$offSetMax
+                $bottomRightSpread
 				$bottomRightBlurColor;
 	}
 }
