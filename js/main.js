@@ -14,11 +14,8 @@ let switchFavIcon = (state) => {
 };
 
 // Global Radio Btn Visiual On Click Funtionality.
-let radioBtnToggle = (radioBtn) => {
-	radioBtn.classList.toggle("on");
-};
 document.querySelectorAll('[class*="--radio"]').forEach((radioBtn) => {
-	radioBtn.addEventListener("click", () => radioBtnToggle(radioBtn));
+	radioBtn.addEventListener("click", () => radioBtn.classList.toggle("on"));
 });
 
 // Light/Dark Mode Functionality

@@ -413,8 +413,8 @@ body {
   position: absolute;
   right: calc(-1 * var(--body-border));
   bottom: calc(-1 * var(--body-border));
-  height: 102px;
-  width: 102px;
+  height: 100px;
+  width: 100px;
   -webkit-clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
           clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
   overflow: hidden;
@@ -425,7 +425,7 @@ body {
           transform: rotate(-45deg);
   width: var(--logo-width);
   position: absolute;
-  bottom: 30px;
+  bottom: 29px;
   right: -17px;
 }
 
