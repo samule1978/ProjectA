@@ -32,7 +32,7 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
   --body-max-width: 1024px;
   --body-margin: 20px;
   --body-border: 0px;
-  --logo-width: 125px;
+  --logo-width: 100px;
   --cb-smooth: cubic-bezier(0.27, 0.01, 0.38, 1.06);
   --clr-black: #000000;
   --clr-white: #ffffff;
@@ -413,8 +413,8 @@ body {
   position: absolute;
   right: calc(-1 * var(--body-border));
   bottom: calc(-1 * var(--body-border));
-  height: 128px;
-  width: 128px;
+  height: 102px;
+  width: 102px;
   -webkit-clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
           clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
   overflow: hidden;
@@ -425,8 +425,8 @@ body {
           transform: rotate(-45deg);
   width: var(--logo-width);
   position: absolute;
-  bottom: 40px;
-  right: -22px;
+  bottom: 30px;
+  right: -17px;
 }
 
 .logo__container svg #Logo_78 {

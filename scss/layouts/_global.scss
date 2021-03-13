@@ -160,8 +160,8 @@ body {
 		right: calc(-1 * var(--body-border));
 		bottom: calc(-1 * var(--body-border));
 
-		height: 128px;
-		width: 128px;
+		height: 102px;
+		width: 102px;
 
 		clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
 
@@ -171,8 +171,8 @@ body {
 			transform: rotate(-45deg);
 			width: var(--logo-width);
 			position: absolute;
-			bottom: 40px;
-			right: -22px;
+			bottom: 30px;
+			right: -17px;
 
 			#Logo_78 {
 				transition: fill 500ms var(--cb-smooth);
