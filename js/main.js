@@ -22,11 +22,11 @@ document.querySelectorAll('[class*="--radio"]').forEach((radioBtn) => {
 let switchMode = (btn) => {
 	["light", "dark"].map((state) => {
 		document.body.classList.toggle(`mode--${state}`);
-	});
 
-	switchFavIcon(
-		document.body.classList.contains("mode--light") ? "light" : "dark"
-	);
+		switchFavIcon(
+			document.body.classList.contains(`[class*="--${state}"]`) ? "light"	: "dark"
+		);
+	});
 };
 const modeBtn = document.querySelector(".switch__btn");
 modeBtn.addEventListener("click", () => switchMode(modeBtn));
