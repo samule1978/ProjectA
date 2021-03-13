@@ -119,6 +119,9 @@ body {
 	margin: var(--body-margin);
 }
 
+h1 { font-size: 15px; font-weight: bold; line-height: 20px; padding-bottom: 10px; }
+p { font-size: 12px; line-height: 17px; padding-bottom: 5px; }
+
 .grid-container {
 	&.__header {
 		grid-area: header;
@@ -126,7 +129,7 @@ body {
 	}
 	&__content {
 		grid-area: content;
-		padding: 10px;
+		padding: 10px 20px;
 	}
 	&__footer {
 		grid-area: footer;
@@ -143,7 +146,7 @@ body {
 
 	max-width: var(--body-max-width);
 	min-height: 500px;
-	height: calc(80vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
+	//height: calc(80vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
 	margin: 0 auto;
 	padding: 0;
 	position: relative;

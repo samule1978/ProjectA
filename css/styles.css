@@ -369,6 +369,19 @@ body {
   margin: var(--body-margin);
 }
 
+h1 {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 20px;
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 12px;
+  line-height: 17px;
+  padding-bottom: 5px;
+}
+
 .grid-container {
   display: -ms-grid;
   display: grid;
@@ -378,7 +391,6 @@ body {
   transition: all 500ms var(--cb-smooth);
   max-width: var(--body-max-width);
   min-height: 500px;
-  height: calc(80vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
   margin: 0 auto;
   padding: 0;
   position: relative;
@@ -398,7 +410,7 @@ body {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: content;
-  padding: 10px;
+  padding: 10px 20px;
 }
 
 .grid-container__footer {
