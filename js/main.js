@@ -54,6 +54,6 @@ let parallaxContainerShadow = (e, elem) => {
 	}
 };
 
-document.addEventListener("mousemove", (e) =>
+/*document.addEventListener("mousemove", (e) =>
 	parallaxContainerShadow(e, gridContainer)
-);
+);*/

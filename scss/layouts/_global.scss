@@ -119,18 +119,27 @@ body {
 	margin: var(--body-margin);
 }
 
-h1 { font-size: 15px; font-weight: bold; line-height: 20px; padding-bottom: 10px; }
-p { font-size: 12px; line-height: 17px; padding-bottom: 5px; }
+h1 {
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 20px;
+	padding-bottom: 10px;
+}
+p {
+	font-size: 12px;
+	line-height: 17px;
+	padding-bottom: 5px;
+}
 
 .grid-container {
-	&.__header {
+	&__header {
 		grid-area: header;
 		padding: 0px;
-		height: 50px;
+		height: 40px;
 	}
 	&__content {
 		grid-area: content;
-		padding: 10px 20px;
+		padding: 0px 20px;
 	}
 	&__footer {
 		grid-area: footer;
@@ -146,6 +155,7 @@ p { font-size: 12px; line-height: 17px; padding-bottom: 5px; }
 
 	transition: all 500ms var(--cb-smooth);
 
+	min-width: calc(var(--body-min-width) - (var(--body-margin) * 2) - (var(--body-border) * 2));
 	max-width: var(--body-max-width);
 	min-height: 500px;
 	//height: calc(80vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
