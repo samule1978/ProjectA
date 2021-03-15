@@ -4,14 +4,21 @@ let switchFavIcon = (state) => {
 	const favIconLight = "img/SG78Favicon.png";
 	const favIconDark = "img/SG78FaviconDark.png";
 
-	var favIcon = document.querySelector("link[rel~='icon']");
-	if (!favIcon) {
+	var favIcons = document.querySelectorAll("link[rel*='icon']");
+	if (!favIcons) {
+		favShortcutIcon = document.createElement("link");
+		favShortcutIcon.rel = "shortcut icon";
+		favShortcutIcon.type = "image/x-icon";
+		document.getElementsByTagName("head")[0].appendChild(favShortcutIcon);
+
 		favIcon = document.createElement("link");
 		favIcon.rel = "icon";
 		favIcon.type = "image/x-icon";
 		document.getElementsByTagName("head")[0].appendChild(favIcon);
+
+		favIcons = document.querySelectorAll("link[rel*='icon']");
 	}
-	favIcon.href = state == "light" ? favIconLight : favIconDark;
+	favIcons.forEach((favIcon) => favIcon.href = state == "light" ? favIconLight : favIconDark);
 };
 
 // Global Radio Btn Visiual On Click Funtionality.
