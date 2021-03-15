@@ -113,7 +113,7 @@ body {
 	font-size: 2rem;
 
 	background-color: var(--clr-body-bg);
-	transition: all 500ms var(--cb-smooth);
+	transition: background-color 500ms var(--cb-smooth);
 	color: var(--clr-body);
 
 	margin: var(--body-margin);
@@ -153,7 +153,7 @@ p {
 		"footer";
 	grid-gap: 0px;
 
-	transition: all 500ms var(--cb-smooth);
+	transition: color 500ms var(--cb-smooth);
 
 	min-width: calc(var(--body-min-width) - (var(--body-margin) * 2) - (var(--body-border) * 2));
 	max-width: var(--body-max-width);
