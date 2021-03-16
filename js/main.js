@@ -33,7 +33,11 @@ document.querySelectorAll('[class*="--radio"]').forEach((radioBtn) => {
 // Light/Dark Mode Functionality
 let switchMode = (mode) => {
 	if (mode) {
-		document.body.classList.remove(document.body.classList.contains("mode--light") ? "mode--light" : "mode--dark");
+		document.body.classList.remove(
+			document.body.classList.contains("mode--light")
+				? "mode--light"
+				: "mode--dark"
+		);
 		document.body.classList.add(`mode--${mode}`);
 		switchFavIcon(mode);
 	} else {
@@ -41,23 +45,24 @@ let switchMode = (mode) => {
 			document.body.classList.toggle(`mode--${state}`);
 		});
 
-		switchFavIcon(document.body.classList.contains("mode--light") ? "light" : "dark");
+		switchFavIcon(
+			document.body.classList.contains("mode--light") ? "light" : "dark"
+		);
 	}
 };
 modeBtn.addEventListener("click", () => switchMode());
 
 // Automatically set dark/light mode based on user device setting.
+var darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+let setMode = (dark) => {
+	modeBtn.classList.remove("on");
+	if (dark) modeBtn.classList.add("on");
+	switchMode(dark ? "dark" : "light");
+};
 let enableAutoLightDarkMode = () => {
-	const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
+	setMode(darkModeMediaQuery.matches);
 	darkModeMediaQuery.addEventListener("change", (e) => {
-		const darkModeOn = e.matches;
-
-		modeBtn.classList.remove("on");
-		if (darkModeOn) modeBtn.classList.add("on");
-		switchMode(darkModeOn ? "dark" : "light");
-
-		//console.log(`Dark mode is ${darkModeOn ? '🌒 on' : '☀️ off'}.`);
+		setMode(e.matches);
 	});
 };
 enableAutoLightDarkMode();
