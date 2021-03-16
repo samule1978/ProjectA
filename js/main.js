@@ -1,6 +1,7 @@
+const modeBtn = document.querySelector(".switch__btn");
+
 // Dynamic FavIcon Funtionality
 let switchFavIcon = (state) => {
-	console.log(state);
 	const favIconLight = "img/SG78Favicon.png";
 	const favIconDark = "img/SG78FaviconDark.png";
 
@@ -18,7 +19,10 @@ let switchFavIcon = (state) => {
 
 		favIcons = document.querySelectorAll("link[rel*='icon']");
 	}
-	favIcons.forEach((favIcon) => favIcon.href = state == "light" ? favIconLight : favIconDark);
+	favIcons.forEach(
+		(favIcon) =>
+			(favIcon.href = state == "light" ? favIconLight : favIconDark)
+	);
 };
 
 // Global Radio Btn Visiual On Click Funtionality.
@@ -27,19 +31,36 @@ document.querySelectorAll('[class*="--radio"]').forEach((radioBtn) => {
 });
 
 // Light/Dark Mode Functionality
-let switchMode = (btn) => {
-	["light", "dark"].map((state) => {
-		document.body.classList.toggle(`mode--${state}`);
-	});
+let switchMode = (mode) => {
+	if (mode) {
+		document.body.classList.remove(document.body.classList.contains("mode--light") ? "mode--light" : "mode--dark");
+		document.body.classList.add(`mode--${mode}`);
+		switchFavIcon(mode);
+	} else {
+		["light", "dark"].map((state) => {
+			document.body.classList.toggle(`mode--${state}`);
+		});
 
-	switchFavIcon(
-		document.body.classList.contains('mode--light')
-			? "light"
-			: "dark"
-	);
+		switchFavIcon(document.body.classList.contains("mode--light") ? "light" : "dark");
+	}
 };
-const modeBtn = document.querySelector(".switch__btn");
-modeBtn.addEventListener("click", () => switchMode(modeBtn));
+modeBtn.addEventListener("click", () => switchMode());
+
+// Automatically set dark/light mode based on user device setting.
+let enableAutoLightDarkMode = () => {
+	const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+	darkModeMediaQuery.addEventListener("change", (e) => {
+		const darkModeOn = e.matches;
+
+		modeBtn.classList.remove("on");
+		if (darkModeOn) modeBtn.classList.add("on");
+		switchMode(darkModeOn ? "dark" : "light");
+
+		//console.log(`Dark mode is ${darkModeOn ? '🌒 on' : '☀️ off'}.`);
+	});
+};
+enableAutoLightDarkMode();
 
 const gridContainer = document.querySelector(".grid-container");
 const gridContainerShadowDefault = css(gridContainer, "box-shadow");
