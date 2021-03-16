@@ -21,41 +21,38 @@
 	--clr-adobe-volt-shades-d: #323b10;
 	--clr-adobe-volt-shades-e: #bde03f;
 
-	.mode {
-		/* Light Mode Theme */
-		&--light {
-			--clr-body-bg: var(--clr-volt);
-			--clr-body: var(--clr-black);
-			--clr-logo-bg: var(--clr-black);
-			--clr-logo-primary: var(--clr-volt);
-			--clr-logo-secondary: var(--clr-black);
+	/* Light Mode Theme Colours */
+	--clr-body-bg: var(--clr-volt);
+	--clr-body: var(--clr-black);
+	--clr-logo-bg: var(--clr-black);
+	--clr-logo-primary: var(--clr-volt);
+	--clr-logo-secondary: var(--clr-black);
 
-			--neu-ctr-osm: 20px;
-			--neu-ctr-tl-spread: 0px;
-			--neu-ctr-br-spread: 0px;
-			--neu-ctr-bg-clr: var(--clr-volt);
-			--neu-ctr-bdr-clr: rgba(221, 252, 110, 1);
-			--neu-ctr-tl-clr: rgba(224, 255, 111, 0.7);
-			--neu-ctr-br-clr: #bde03f;
+	--neu-ctr-osm: 20px;
+	--neu-ctr-tl-spread: 0px;
+	--neu-ctr-br-spread: 0px;
+	--neu-ctr-bg-clr: var(--clr-volt);
+	--neu-ctr-bdr-clr: rgba(221, 252, 110, 1);
+	--neu-ctr-tl-clr: rgba(224, 255, 111, 0.7);
+	--neu-ctr-br-clr: #bde03f;
 
-			--neu-radio-osm: 4px;
-			--neu-radio-tl-spread: 0px;
-			--neu-radio-br-spread: 0px;
-			--neu-radio-bg-clr: rgba(0, 0, 0, 0);
-			--neu-radio-bdr-clr: rgba(221, 252, 110, 0.7);
-			--neu-radio-tl-clr: rgba(255, 255, 255, 0.4);
-			--neu-radio-br-clr: #bde03f;
+	--neu-radio-osm: 4px;
+	--neu-radio-tl-spread: 0px;
+	--neu-radio-br-spread: 0px;
+	--neu-radio-bg-clr: rgba(0, 0, 0, 0);
+	--neu-radio-bdr-clr: rgba(221, 252, 110, 0.7);
+	--neu-radio-tl-clr: rgba(255, 255, 255, 0.4);
+	--neu-radio-br-clr: #bde03f;
 
-			--neu-radio-btn-osm: 4px;
-			--neu-radio-btn-tl-spread: 0px;
-			--neu-radio-btn-br-spread: 0px;
-			--neu-radio-btn-bg-clr: var(--clr-black);
-			--neu-radio-btn-bdr-clr: var(--clr-volt);
-			--neu-radio-btn-tl-clr: rgba(255, 255, 255, 0.4);
-			--neu-radio-btn-br-clr: #bde03f;
-		}
-
-		/* Dark Mode Theme */
+	--neu-radio-btn-osm: 4px;
+	--neu-radio-btn-tl-spread: 0px;
+	--neu-radio-btn-br-spread: 0px;
+	--neu-radio-btn-bg-clr: var(--clr-black);
+	--neu-radio-btn-bdr-clr: var(--clr-volt);
+	--neu-radio-btn-tl-clr: rgba(255, 255, 255, 0.4);
+	--neu-radio-btn-br-clr: #bde03f;
+	.theme {
+		/* Dark Mode Theme Colours */
 		&--dark {
 			--clr-body-bg: var(--clr-black);
 			--clr-body: var(--clr-volt);

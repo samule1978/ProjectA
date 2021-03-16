@@ -45,14 +45,7 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
   --clr-adobe-volt-shades-c: #d5fb46;
   --clr-adobe-volt-shades-d: #323b10;
   --clr-adobe-volt-shades-e: #bde03f;
-}
-
-:root .mode {
-  /* Light Mode Theme */
-  /* Dark Mode Theme */
-}
-
-:root .mode--light {
+  /* Light Mode Theme Colours */
   --clr-body-bg: var(--clr-volt);
   --clr-body: var(--clr-black);
   --clr-logo-bg: var(--clr-black);
@@ -81,7 +74,11 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
   --neu-radio-btn-br-clr: #bde03f;
 }
 
-:root .mode--dark {
+:root .theme {
+  /* Dark Mode Theme Colours */
+}
+
+:root .theme--dark {
   --clr-body-bg: var(--clr-black);
   --clr-body: var(--clr-volt);
   --clr-logo-bg: var(--clr-volt);
@@ -391,7 +388,7 @@ p {
   grid-gap: 0px;
   -webkit-transition: color 500ms var(--cb-smooth);
   transition: color 500ms var(--cb-smooth);
-  min-width: calc(var(--body-min-width) - (var(--body-margin) * 2) - (var(--body-border) * 2));
+  min-width: calc( var(--body-min-width) - (var(--body-margin) * 2) - (var(--body-border) * 2));
   max-width: var(--body-max-width);
   min-height: 500px;
   margin: 0 auto;

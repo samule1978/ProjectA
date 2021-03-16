@@ -1,7 +1,7 @@
 const modeBtn = document.querySelector(".switch__btn");
 
 // Dynamic FavIcon Funtionality
-let switchFavIcon = (state) => {
+let switchFavIcon = (theme) => {
 	const favIconLight = "img/SG78Favicon.png";
 	const favIconDark = "img/SG78FaviconDark.png";
 
@@ -21,7 +21,7 @@ let switchFavIcon = (state) => {
 	}
 	favIcons.forEach(
 		(favIcon) =>
-			(favIcon.href = state == "light" ? favIconLight : favIconDark)
+			(favIcon.href = theme == "light" ? favIconLight : favIconDark)
 	);
 };
 
@@ -31,45 +31,41 @@ document.querySelectorAll('[class*="--radio"]').forEach((radioBtn) => {
 });
 
 // Light/Dark Mode Functionality
-let switchMode = (mode) => {
-	if (mode) {
-		document.body.classList.remove(
-			document.body.classList.contains("mode--light")
-				? "mode--light"
-				: "mode--dark"
-		);
-		document.body.classList.add(`mode--${mode}`);
+let switchMode = (theme) => {
+	if (theme) {
+		if (theme == "light" && document.body.classList.contains("theme--dark")) document.body.classList.remove("theme--dark");
+		if (theme == "dark" && !document.body.classList.contains("theme--dark")) document.body.classList.add("theme--dark");
 
-		switchFavIcon(mode);
+		switchFavIcon(theme);
 	} else {
-		["light", "dark"].map((state) => {
-			document.body.classList.toggle(`mode--${state}`);
-		});
+		document.body.classList.toggle("theme--dark");
 
 		switchFavIcon(
-			document.body.classList.contains("mode--light") ? "light" : "dark"
+			document.body.classList.contains("theme--dark") ? "dark" : "light"
 		);
 	}
 };
 modeBtn.addEventListener("click", () => switchMode());
 
 // Automatically set dark/light mode based on user device setting.
-var darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 let setMode = (dark) => {
-	modeBtn.classList.remove("on");
-	if (dark) modeBtn.classList.add("on");
+	if (dark && !modeBtn.classList.contains("on")) modeBtn.classList.add("on");
+	if (!dark && modeBtn.classList.contains("on")) modeBtn.classList.remove("on");
 	switchMode(dark ? "dark" : "light");
 };
 let enableAutoLightDarkMode = () => {
-	setMode(darkModeMediaQuery.matches);
-	darkModeMediaQuery.addEventListener("change", (e) => {
+	var devicePreferredColorSchemeIndicator = window.matchMedia("(prefers-color-scheme: dark)");
+	
+	setMode(devicePreferredColorSchemeIndicator.matches);
+	devicePreferredColorSchemeIndicator.addEventListener("change", (e) => {
 		setMode(e.matches);
 	});
 };
 enableAutoLightDarkMode();
 
+/*
 const gridContainer = document.querySelector(".grid-container");
-const gridContainerShadowDefault = css(gridContainer, "box-shadow");
+const gridContainerShadowDefault = computedStyle(gridContainer, "box-shadow");
 let parallaxContainerShadow = (e, elem) => {
 	let _elem_w = elem.innerWidth;
 	let _elem_h = elem.innerHeight;
@@ -83,12 +79,12 @@ let parallaxContainerShadow = (e, elem) => {
 	console.log(`${_mouseXCentrePos}`);
 
 	if (_mouseXCentrePos >= -100 && _mouseXCentrePos <= 100) {
-		css(elem, "transform", `translateX(${_mouseXCentrePos}px)`);
+		computedStyle(elem, "transform", `translateX(${_mouseXCentrePos}px)`);
 	} else {
-		css(elem, "transform", `translateX(0px)`);
+		computedStyle(elem, "transform", `translateX(0px)`);
 	}
 };
-
-/*document.addEventListener("mousemove", (e) =>
+document.addEventListener("mousemove", (e) =>
 	parallaxContainerShadow(e, gridContainer)
-);*/
+);
+*/
