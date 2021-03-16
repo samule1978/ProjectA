@@ -39,6 +39,7 @@ let switchMode = (mode) => {
 				: "mode--dark"
 		);
 		document.body.classList.add(`mode--${mode}`);
+
 		switchFavIcon(mode);
 	} else {
 		["light", "dark"].map((state) => {
