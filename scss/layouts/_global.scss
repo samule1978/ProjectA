@@ -35,7 +35,7 @@ html {
 					margin: 2px;
 					
 					@include neu(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), var(--a-p-bg), 0px, false, 100%, 3px);
-					background-color: var(--clr-primary-fg);
+					background-color: var(--clr-btn-bg);
 				}
 
 				&.on {

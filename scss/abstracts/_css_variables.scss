@@ -28,13 +28,14 @@
 	--a-p-fg: 100%;
 	--hsl-primary-fg: var(--h-p-fg), var(--s-p-fg), var(--l-p-fg);
 	--hsla-primary-fg: var(--hsl-primary-fg), var(--a-p-fg);
-	--clr-primary-fg: hsla(var(--hsla-primary-fg));
+	--clr-primary-fg: hsla(var(--hsla-primary-fg));	
 
 	--clr-body-bg: var(--clr-primary-bg);
 	--clr-body: var(--clr-primary-fg);
 	--clr-logo-bg: var(--clr-primary-fg);
 	--clr-logo-primary: var(--clr-primary-bg);
 	--clr-logo-secondary: var(--clr-primary-fg);
+	--clr-btn-bg: hsla(var(--hsla-primary-fg));
 
 	.theme {
 		/* Dark Mode Theme Colours */
@@ -60,6 +61,7 @@
 			--clr-logo-bg: var(--clr-primary-fg);
 			--clr-logo-primary: var(--clr-primary-bg);
 			--clr-logo-secondary: var(--clr-primary-fg);
+			--clr-btn-bg: hsla(var(--hsla-primary-fg));
 		}
 	}
 }
