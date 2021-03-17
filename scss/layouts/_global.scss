@@ -6,32 +6,10 @@ html {
 	&__neu {
 		&__volt {
 			&--box {
-				//@include neu(78, 90%, 57%);
-				@include neuShadow(
-					17px,
-					var(--neu-ctr-bg-clr),
-					1px,
-					var(--neu-ctr-bdr-clr),
-					var(--neu-ctr-osm),
-					var(--neu-ctr-tl-spread),
-					var(--neu-ctr-tl-clr),
-					var(--neu-ctr-br-spread),
-					var(--neu-ctr-br-clr)
-				);
+				@include neu(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), var(--a-p-bg), 1px);
 
 				&.inset {
-					@include neuShadow(
-						null,
-						null,
-						null,
-						null,
-						var(--neu-ctr-osm),
-						var(--neu-ctr-tl-spread),
-						var(--neu-ctr-tl-clr),
-						var(--neu-ctr-br-spread),
-						var(--neu-ctr-br-clr),
-						true
-					);
+					@include neu(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), var(--a-p-bg), 1px, true);
 				}
 			}
 
@@ -42,17 +20,7 @@ html {
 
 				width: 35px;
 				height: 20px;
-				@include neuShadow(
-					20px,
-					var(--neu-radio-bg-clr),
-					1px,
-					var(--neu-radio-bdr-clr),
-					var(--neu-radio-osm),
-					var(--neu-radio-tl-spread),
-					var(--neu-radio-tl-clr),
-					var(--neu-radio-br-spread),
-					var(--neu-radio-br-clr)
-				);
+				@include neu(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), var(--a-p-bg), 1px);				
 
 				&:before {
 					content: "";
@@ -65,18 +33,9 @@ html {
 					left: 0;
 					top: 0;
 					margin: 2px;
-
-					@include neuShadow(
-						100%,
-						var(--neu-radio-btn-bg-clr),
-						0px,
-						var(--neu-radio-btn-bdr-clr),
-						var(--neu-radio-btn-osm),
-						var(--neu-radio-btn-tl-spread),
-						var(--neu-radio-btn-tl-clr),
-						var(--neu-radio-btn-br-spread),
-						var(--neu-radio-btn-br-clr)
-					);
+					
+					@include neu(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), var(--a-p-bg), 0px, false, 100%, 3px);
+					background-color: var(--clr-primary-fg);
 				}
 
 				&.on {
@@ -85,24 +44,8 @@ html {
 					}
 				}
 
-				&.inset {
-					@include neuShadow(
-						null,
-						null,
-						null,
-						null,
-						var(--neu-radio-osm),
-						var(--neu-radio-tl-spread),
-						var(--neu-radio-tl-clr),
-						var(--neu-radio-br-spread),
-						var(--neu-radio-br-clr),
-						true
-					);
-
-					&.on {
-						&:before {
-						}
-					}
+				&.inset {					
+					@include neu(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), var(--a-p-bg), 1px, true);
 				}
 			}
 		}

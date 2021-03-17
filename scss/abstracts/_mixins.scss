@@ -3,55 +3,27 @@
 	$s,
 	$l,
 	$a: 100%,
-	$lightSource: 0, // 0 -> Top left, 1 -> Top right, 2 -> Bottom right, 3 -> Bottom left
-	$radius: 17px,
-	$distance: 6px,
+	$borderSize: 1px,
+	$inset: false,	
+	$radius: 20px,
+	$distance: 6px,	
+	$lightSource: 0, // 0 -> Top left, 1 -> Top right, 2 -> Bottom right, 3 -> Bottom left		
 	$intensity: 10%,
 	$blur: calc(#{$distance} * 2),
-	$spread: 0px,
-	$inset: false
+	$spread: 0px	
 ) {
 	@if ($h and $s and $l) {
 		border-radius: $radius;
+		border: solid $borderSize hsla($h, $s, calc(#{$l} -(#{$intensity} / 2)), $a) !important;
 		background-color: hsla($h, $s, $l, $a);
 		@if $lightSource == 0 {
-			@if $inset == false {
+			@if not $inset {
 				box-shadow:	$distance $distance $blur $spread hsla($h, $s, calc(#{$l} - #{$intensity}), $a),
-							calc(-1 * #{$distance}) calc(-1 * #{$distance}) $blur $spread hsla($h, $s, calc(#{$l} + #{$intensity}), $a);	
-			} else {
-
+							calc(-1 * #{$distance}) calc(-1 * #{$distance}) $blur $spread hsla($h, $s, calc(#{$l} + #{$intensity}), $a);
+			} @else {
+				box-shadow:	inset $distance $distance $blur $spread hsla($h, $s, calc(#{$l} - #{$intensity}), $a),
+							inset calc(-1 * #{$distance}) calc(-1 * #{$distance}) $blur $spread hsla($h, $s, calc(#{$l} + #{$intensity}), $a);
 			}
 		}
-	}
-}
-
-
-@mixin neuShadow(
-	$borderRadius,
-	$backgroundColor,
-	$borderSize,
-	$borderColor,
-	$offSetMax,
-    $topLeftSpread,
-	$topLeftBlurColor,
-    $bottomRightSpread,
-	$bottomRightBlurColor,
-	$inset: false
-) {
-	@if $borderRadius {
-		border-radius: $borderRadius;
-	}
-	@if $backgroundColor {
-		background-color: $backgroundColor;
-	}
-	@if $borderSize and $borderColor {
-		border: solid $borderSize $borderColor;
-	}
-	@if $inset {
-		box-shadow: inset calc(#{$offSetMax} / 2) calc(#{$offSetMax} / 2) $offSetMax $bottomRightSpread $bottomRightBlurColor,
-			        inset calc(-1 * (#{$offSetMax} / 2)) calc(-1 * (#{$offSetMax} / 2)) $offSetMax $topLeftSpread $topLeftBlurColor;
-	} @else {
-		box-shadow: calc(#{$offSetMax} / 2) calc(#{$offSetMax} / 2) $offSetMax $bottomRightSpread $bottomRightBlurColor,
-			        calc(-1 * (#{$offSetMax} / 2)) calc(-1 * (#{$offSetMax} / 2)) $offSetMax $topLeftSpread $topLeftBlurColor;
 	}
 }
