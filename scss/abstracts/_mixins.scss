@@ -1,3 +1,31 @@
+@mixin neu(
+	$h,
+	$s,
+	$l,
+	$a: 100%,
+	$lightSource: 0, // 0 -> Top left, 1 -> Top right, 2 -> Bottom right, 3 -> Bottom left
+	$radius: 17px,
+	$distance: 6px,
+	$intensity: 10%,
+	$blur: calc(#{$distance} * 2),
+	$spread: 0px,
+	$inset: false
+) {
+	@if ($h and $s and $l) {
+		border-radius: $radius;
+		background-color: hsla($h, $s, $l, $a);
+		@if $lightSource == 0 {
+			@if $inset == false {
+				box-shadow:	$distance $distance $blur $spread hsla($h, $s, calc(#{$l} - #{$intensity}), $a),
+							calc(-1 * #{$distance}) calc(-1 * #{$distance}) $blur $spread hsla($h, $s, calc(#{$l} + #{$intensity}), $a);	
+			} else {
+
+			}
+		}
+	}
+}
+
+
 @mixin neuShadow(
 	$borderRadius,
 	$backgroundColor,
