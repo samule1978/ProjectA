@@ -10,8 +10,8 @@
 
 	--cb-smooth: cubic-bezier(0.27, 0.01, 0.38, 1.06);
 
-	--clr-black: #000000;
-	--clr-white: #ffffff;
+	--clr-black: hsla(0, 0%, 0%, 100%);
+	--clr-white: hsla(0, 0%, 100%, 100%);
 
 	/* Light Mode Theme Colours */
 	--h-p-bg: 78;
@@ -35,19 +35,19 @@
 	--clr-logo-bg: var(--clr-primary-fg);
 	--clr-logo-primary: var(--clr-primary-bg);
 	--clr-logo-secondary: var(--clr-primary-fg);
-	--clr-btn-bg: hsla(var(--hsla-primary-fg));
+	--clr-radio-btn-bg: hsla(var(--hsla-primary-fg));
 
 	.theme {
 		/* Dark Mode Theme Colours */
 		&--dark {
 			--h-p-bg: 0;
 			--s-p-bg: 0%;
-			--l-p-bg: 0%;
+			--l-p-bg: 7%;
 			--a-p-bg: 100%;
 			--hsl-primary-bg: var(--h-p-bg), var(--s-p-bg), var(--l-p-bg);
 			--hsla-primary-bg: var(--hsl-primary-bg), var(--a-p-bg);
 			--clr-primary-bg: hsla(var(--hsla-primary-bg));
-
+			
 			--h-p-fg: 78;
 			--s-p-fg: 90%;
 			--l-p-fg: 57%;
@@ -61,7 +61,7 @@
 			--clr-logo-bg: var(--clr-primary-fg);
 			--clr-logo-primary: var(--clr-primary-bg);
 			--clr-logo-secondary: var(--clr-primary-fg);
-			--clr-btn-bg: hsla(var(--hsla-primary-fg));
+			--clr-radio-btn-bg: hsla(var(--hsla-primary-fg));
 		}
 	}
 }

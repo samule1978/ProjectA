@@ -36,8 +36,8 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
   --logo-width: 100px;
   --logo-height: var(--logo-width);
   --cb-smooth: cubic-bezier(0.27, 0.01, 0.38, 1.06);
-  --clr-black: #000000;
-  --clr-white: #ffffff;
+  --clr-black: hsla(0, 0%, 0%, 100%);
+  --clr-white: hsla(0, 0%, 100%, 100%);
   /* Light Mode Theme Colours */
   --h-p-bg: 78;
   --s-p-bg: 90%;
@@ -58,7 +58,7 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
   --clr-logo-bg: var(--clr-primary-fg);
   --clr-logo-primary: var(--clr-primary-bg);
   --clr-logo-secondary: var(--clr-primary-fg);
-  --clr-btn-bg: hsla(var(--hsla-primary-fg));
+  --clr-radio-btn-bg: hsla(var(--hsla-primary-fg));
 }
 
 :root .theme {
@@ -68,7 +68,7 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
 :root .theme--dark {
   --h-p-bg: 0;
   --s-p-bg: 0%;
-  --l-p-bg: 0%;
+  --l-p-bg: 7%;
   --a-p-bg: 100%;
   --hsl-primary-bg: var(--h-p-bg), var(--s-p-bg), var(--l-p-bg);
   --hsla-primary-bg: var(--hsl-primary-bg), var(--a-p-bg);
@@ -85,7 +85,7 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
   --clr-logo-bg: var(--clr-primary-fg);
   --clr-logo-primary: var(--clr-primary-bg);
   --clr-logo-secondary: var(--clr-primary-fg);
-  --clr-btn-bg: hsla(var(--hsla-primary-fg));
+  --clr-radio-btn-bg: hsla(var(--hsla-primary-fg));
 }
 
 @-webkit-keyframes fontbulger {
@@ -289,18 +289,18 @@ html {
 
 .shadow__neu__volt--box {
   border-radius: 20px;
-  border: solid 1px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) -(10% / 2)), var(--a-p-bg)) !important;
+  border: solid 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) -(10% * 0.7)), var(--a-p-bg)) !important;
   background-color: hsla(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), var(--a-p-bg));
-  -webkit-box-shadow: 6px 6px calc(6px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - 10%), var(--a-p-bg)), calc(-1 * 6px) calc(-1 * 6px) calc(6px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) + 10%), var(--a-p-bg));
-          box-shadow: 6px 6px calc(6px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - 10%), var(--a-p-bg)), calc(-1 * 6px) calc(-1 * 6px) calc(6px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) + 10%), var(--a-p-bg));
+  -webkit-box-shadow: 3px 3px calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - 10%), var(--a-p-bg)), calc(-1 * 3px) calc(-1 * 3px) calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) + 10%), var(--a-p-bg));
+          box-shadow: 3px 3px calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - 10%), var(--a-p-bg)), calc(-1 * 3px) calc(-1 * 3px) calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) + 10%), var(--a-p-bg));
 }
 
 .shadow__neu__volt--box.inset {
   border-radius: 20px;
-  border: solid 1px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) -(10% / 2)), var(--a-p-bg)) !important;
+  border: solid 1px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) -(10% * 0.7)), var(--a-p-bg)) !important;
   background-color: hsla(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), var(--a-p-bg));
-  -webkit-box-shadow: inset 6px 6px calc(6px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - 10%), var(--a-p-bg)), inset calc(-1 * 6px) calc(-1 * 6px) calc(6px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) + 10%), var(--a-p-bg));
-          box-shadow: inset 6px 6px calc(6px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - 10%), var(--a-p-bg)), inset calc(-1 * 6px) calc(-1 * 6px) calc(6px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) + 10%), var(--a-p-bg));
+  -webkit-box-shadow: inset 3px 3px calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - 10%), var(--a-p-bg)), inset calc(-1 * 3px) calc(-1 * 3px) calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) + 10%), var(--a-p-bg));
+          box-shadow: inset 3px 3px calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - 10%), var(--a-p-bg)), inset calc(-1 * 3px) calc(-1 * 3px) calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) + 10%), var(--a-p-bg));
 }
 
 .shadow__neu__volt--radio {
@@ -310,10 +310,10 @@ html {
   width: 35px;
   height: 20px;
   border-radius: 20px;
-  border: solid 1px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) -(10% / 2)), var(--a-p-bg)) !important;
+  border: solid 1px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) -(10% * 0.7)), var(--a-p-bg)) !important;
   background-color: hsla(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), var(--a-p-bg));
-  -webkit-box-shadow: 6px 6px calc(6px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - 10%), var(--a-p-bg)), calc(-1 * 6px) calc(-1 * 6px) calc(6px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) + 10%), var(--a-p-bg));
-          box-shadow: 6px 6px calc(6px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - 10%), var(--a-p-bg)), calc(-1 * 6px) calc(-1 * 6px) calc(6px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) + 10%), var(--a-p-bg));
+  -webkit-box-shadow: 3px 3px calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - 10%), var(--a-p-bg)), calc(-1 * 3px) calc(-1 * 3px) calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) + 10%), var(--a-p-bg));
+          box-shadow: 3px 3px calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - 10%), var(--a-p-bg)), calc(-1 * 3px) calc(-1 * 3px) calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) + 10%), var(--a-p-bg));
 }
 
 .shadow__neu__volt--radio:before {
@@ -327,11 +327,11 @@ html {
   top: 0;
   margin: 2px;
   border-radius: 100%;
-  border: solid 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) -(10% / 2)), var(--a-p-bg)) !important;
+  border: solid 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) -(10% * 0.7)), var(--a-p-bg)) !important;
   background-color: hsla(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), var(--a-p-bg));
   -webkit-box-shadow: 3px 3px calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - 10%), var(--a-p-bg)), calc(-1 * 3px) calc(-1 * 3px) calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) + 10%), var(--a-p-bg));
           box-shadow: 3px 3px calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - 10%), var(--a-p-bg)), calc(-1 * 3px) calc(-1 * 3px) calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) + 10%), var(--a-p-bg));
-  background-color: var(--clr-btn-bg);
+  background-color: var(--clr-radio-btn-bg);
 }
 
 .shadow__neu__volt--radio.on:before {
@@ -340,20 +340,20 @@ html {
 
 .shadow__neu__volt--radio.inset {
   border-radius: 20px;
-  border: solid 1px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) -(10% / 2)), var(--a-p-bg)) !important;
+  border: solid 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) -(10% * 0.7)), var(--a-p-bg)) !important;
   background-color: hsla(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), var(--a-p-bg));
-  -webkit-box-shadow: inset 6px 6px calc(6px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - 10%), var(--a-p-bg)), inset calc(-1 * 6px) calc(-1 * 6px) calc(6px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) + 10%), var(--a-p-bg));
-          box-shadow: inset 6px 6px calc(6px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - 10%), var(--a-p-bg)), inset calc(-1 * 6px) calc(-1 * 6px) calc(6px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) + 10%), var(--a-p-bg));
+  -webkit-box-shadow: inset calc(-1 * 3px) 3px calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - 10%), var(--a-p-bg)), inset 3px calc(-1 * 3px) calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) + 10%), var(--a-p-bg));
+          box-shadow: inset calc(-1 * 3px) 3px calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - 10%), var(--a-p-bg)), inset 3px calc(-1 * 3px) calc(3px * 2) 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) + 10%), var(--a-p-bg));
 }
 
 body {
-  font-family: var(--primary-font);
-  font-size: 2rem;
-  background-color: var(--clr-body-bg);
   -webkit-transition: background-color 500ms var(--cb-smooth);
   transition: background-color 500ms var(--cb-smooth);
-  color: var(--clr-body);
+  font-family: var(--primary-font);
+  font-size: 2rem;
   margin: var(--body-margin);
+  background-color: var(--clr-body-bg);
+  color: var(--clr-body);
 }
 
 h1 {

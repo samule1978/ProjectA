@@ -6,23 +6,52 @@
 	$borderSize: 1px,
 	$inset: false,	
 	$radius: 20px,
-	$distance: 6px,	
+	$distance: 3px,	
 	$lightSource: 0, // 0 -> Top left, 1 -> Top right, 2 -> Bottom right, 3 -> Bottom left		
 	$intensity: 10%,
-	$blur: calc(#{$distance} * 2),
-	$spread: 0px	
+	$spread: 0px,
+	$blur: calc(#{$distance} * 2)		
 ) {
 	@if ($h and $s and $l) {
 		border-radius: $radius;
-		border: solid $borderSize hsla($h, $s, calc(#{$l} -(#{$intensity} / 2)), $a) !important;
+		border: solid $borderSize hsla($h, $s, calc(#{$l} -(#{$intensity} * 0.7)), $a) !important;
 		background-color: hsla($h, $s, $l, $a);
+
 		@if $lightSource == 0 {
+			// Top left
 			@if not $inset {
 				box-shadow:	$distance $distance $blur $spread hsla($h, $s, calc(#{$l} - #{$intensity}), $a),
 							calc(-1 * #{$distance}) calc(-1 * #{$distance}) $blur $spread hsla($h, $s, calc(#{$l} + #{$intensity}), $a);
 			} @else {
 				box-shadow:	inset $distance $distance $blur $spread hsla($h, $s, calc(#{$l} - #{$intensity}), $a),
 							inset calc(-1 * #{$distance}) calc(-1 * #{$distance}) $blur $spread hsla($h, $s, calc(#{$l} + #{$intensity}), $a);
+			}
+		} @else if $lightSource == 1 {
+			// Top right
+			@if not $inset {
+				box-shadow:	calc(-1 * #{$distance}) $distance $blur $spread hsla($h, $s, calc(#{$l} - #{$intensity}), $a),
+							$distance calc(-1 * #{$distance}) $blur $spread hsla($h, $s, calc(#{$l} + #{$intensity}), $a);
+			} @else {
+				box-shadow:	inset calc(-1 * #{$distance}) $distance $blur $spread hsla($h, $s, calc(#{$l} - #{$intensity}), $a),
+							inset $distance calc(-1 * #{$distance}) $blur $spread hsla($h, $s, calc(#{$l} + #{$intensity}), $a);
+			}
+		} @else if $lightSource == 2 {
+			// Bottom right
+			@if not $inset {
+				box-shadow:	calc(-1 * #{$distance}) calc(-1 * #{$distance}) $blur $spread hsla($h, $s, calc(#{$l} - #{$intensity}), $a),
+							$distance $distance $blur $spread hsla($h, $s, calc(#{$l} + #{$intensity}), $a);
+			} @else {
+				box-shadow:	inset calc(-1 * #{$distance}) calc(-1 * #{$distance}) $blur $spread hsla($h, $s, calc(#{$l} - #{$intensity}), $a),
+							inset $distance $distance $blur $spread hsla($h, $s, calc(#{$l} + #{$intensity}), $a);
+			}
+		} @else if $lightSource == 3 {
+			// Bottom left
+			@if not $inset {
+				box-shadow:	$distance calc(-1 * #{$distance}) $blur $spread hsla($h, $s, calc(#{$l} - #{$intensity}), $a),
+							calc(-1 * #{$distance}) $distance $blur $spread hsla($h, $s, calc(#{$l} + #{$intensity}), $a);
+			} @else {
+				box-shadow:	inset $distance calc(-1 * #{$distance}) $blur $spread hsla($h, $s, calc(#{$l} - #{$intensity}), $a),
+							inset calc(-1 * #{$distance}) $distance $blur $spread hsla($h, $s, calc(#{$l} + #{$intensity}), $a);
 			}
 		}
 	}
