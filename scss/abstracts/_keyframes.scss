@@ -1,11 +1,57 @@
-@keyframes fontbulger {
-	0% {
-		font-size: 10px;
+@keyframes containerIn {
+	from {
+		@include neu(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), 0%, 0px);
 	}
-	30% {
-		font-size: 15px;
+
+	to {
+		@include neu(
+			var(--h-p-bg),
+			var(--s-p-bg),
+			var(--l-p-bg),
+			var(--a-p-bg),
+			0px
+		);
 	}
-	100% {
-		font-size: 12px;
+}
+
+@keyframes switchIn {
+	from {
+		@include neu(
+			var(--h-p-bg),
+			var(--s-p-bg),
+			var(--l-p-bg),
+			0%,
+			0px,
+			true,
+			20px,
+			3px,
+			1
+		);
+	}
+
+	to {
+		@include neu(
+			var(--h-p-bg),
+			var(--s-p-bg),
+			var(--l-p-bg),
+			var(--a-p-bg),
+			0px,
+			true,
+			20px,
+			3px,
+			1
+		);
+	}
+}
+
+@keyframes logoIn {
+	from {
+		opacity: 0;
+		transform: translate3d(100%, 100%, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate3d(0%, 0%, 0);
 	}
 }
