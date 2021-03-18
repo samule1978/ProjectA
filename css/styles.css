@@ -492,6 +492,7 @@ p {
   min-width: calc( var(--body-min-width) - (var(--body-margin) * 2) - (var(--body-border) * 2));
   max-width: var(--body-max-width);
   min-height: 500px;
+  height: calc(100vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
   overflow: hidden;
   margin: 0 auto;
   padding: 0;
