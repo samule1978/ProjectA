@@ -13,7 +13,9 @@ html {
 					var(--s-p-bg),
 					var(--l-p-bg),
 					var(--a-p-bg),
-					0px
+					0px,
+					false,
+					20px 20px 0px 20px
 				);
 
 				&.inset {
@@ -23,7 +25,8 @@ html {
 						var(--l-p-bg),
 						var(--a-p-bg),
 						1px,
-						true
+						true,
+						20px 20px 0px 20px
 					);
 				}
 			}
@@ -158,13 +161,13 @@ p {
 	border-width: var(--body-border);
 	border-radius: 20px 20px 0px 20px;
 	@include mq(min-width, 1025px) {
-		border-radius: 20px;
+		border-radius: 20px !important;
 	}
 }
 
 .logo {
 	&__container {
-		@include anim(logoIn, 1000ms, ease, 1000ms);
+		@include anim(logoIn, 1000ms, ease, 0ms);
 
 		background: var(--clr-logo-bg);
 		position: absolute;
