@@ -58,6 +58,8 @@ html {
 					top: 0;
 					margin: 2px;
 
+					@include anim(switchBtnIn, 1000ms, ease, 0ms);
+
 					@include neu(
 						var(--h-p-bg),
 						var(--s-p-bg),
@@ -78,7 +80,7 @@ html {
 				}
 
 				&.inset {
-					@include anim(switchIn, 1000ms, ease, 1000ms);
+					@include anim(switchIn, 1000ms, ease, 0ms);
 
 					@include neu(
 						var(--h-p-bg),

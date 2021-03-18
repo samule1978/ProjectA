@@ -157,6 +157,24 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
   }
 }
 
+@-webkit-keyframes switchBtnIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes switchBtnIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes logoIn {
   from {
     opacity: 0;
@@ -405,6 +423,14 @@ html {
   left: 0;
   top: 0;
   margin: 2px;
+  -webkit-animation-name: switchBtnIn;
+          animation-name: switchBtnIn;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0ms;
+          animation-delay: 0ms;
   border-radius: 100%;
   border: solid 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - (10% * 0.7)), var(--a-p-bg)) !important;
   background-color: hsla(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), var(--a-p-bg));
@@ -424,8 +450,8 @@ html {
           animation-duration: 1000ms;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-  -webkit-animation-delay: 1000ms;
-          animation-delay: 1000ms;
+  -webkit-animation-delay: 0ms;
+          animation-delay: 0ms;
   border-radius: 20px;
   border: solid 0px hsla(var(--h-p-bg), var(--s-p-bg), calc(var(--l-p-bg) - (10% * 0.7)), var(--a-p-bg)) !important;
   background-color: hsla(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), var(--a-p-bg));
