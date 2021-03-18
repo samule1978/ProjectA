@@ -134,11 +134,12 @@
 	}
 }
 
-@mixin anim($name, $duration, $timingFunction, $delay) {
+@mixin anim($name, $duration, $timingFunction, $delay, $direction: null) {
 	animation-name: $name;
 	animation-duration: $duration;
 	animation-timing-function: $timingFunction;
 	animation-delay: $delay;
+	@if $direction { animation-direction: $direction; }
 	@content;	
 }
 
