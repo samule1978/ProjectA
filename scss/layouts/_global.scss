@@ -6,28 +6,11 @@ html {
 	&__neu {
 		&__volt {
 			&--box {
-				@include anim(containerIn, 1000ms, ease, 0ms);
-
-				@include neu(
-					var(--h-p-bg),
-					var(--s-p-bg),
-					var(--l-p-bg),
-					var(--a-p-bg),
-					0px,
-					false,
-					20px 20px 0px 20px
-				);
-
+				@include anim(fadeIn, 1000ms, ease, 0ms);
+				
+				@include neu(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), var(--a-p-bg), 0px, 20px 20px 0px 20px, 0);
 				&.inset {
-					@include neu(
-						var(--h-p-bg),
-						var(--s-p-bg),
-						var(--l-p-bg),
-						var(--a-p-bg),
-						1px,
-						true,
-						20px 20px 0px 20px
-					);
+					@include neu(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), var(--a-p-bg), 0px, 20px 20px 0px 20px, 0, true);
 				}
 			}
 
@@ -39,12 +22,7 @@ html {
 				width: 35px;
 				height: 20px;
 
-				@include neu(
-					var(--h-p-bg),
-					var(--s-p-bg),
-					var(--l-p-bg),
-					var(--a-p-bg)
-				);
+				@include neu(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), var(--a-p-bg));
 
 				&:before {
 					content: "";
@@ -58,17 +36,9 @@ html {
 					top: 0;
 					margin: 2px;
 
-					@include anim(switchBtnIn, 1000ms, ease, 0ms);
+					@include anim(fadeIn, 1000ms, ease, 0ms);					
 
-					@include neu(
-						var(--h-p-bg),
-						var(--s-p-bg),
-						var(--l-p-bg),
-						var(--a-p-bg),
-						0px,
-						false,
-						100%
-					) {
+					@include neu(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), var(--a-p-bg), 0px, 100%) {
 						background-color: var(--clr-radio-btn-bg);
 					}
 				}
@@ -80,19 +50,9 @@ html {
 				}
 
 				&.inset {
-					@include anim(switchIn, 1000ms, ease, 0ms);
+					@include anim(fadeIn, 1000ms, ease, 0ms);
 
-					@include neu(
-						var(--h-p-bg),
-						var(--s-p-bg),
-						var(--l-p-bg),
-						var(--a-p-bg),
-						0px,
-						true,
-						20px,
-						3px,
-						1
-					);
+					@include neu(var(--h-p-bg), var(--s-p-bg), var(--l-p-bg), var(--a-p-bg), 0px, 20px, 1, true);
 				}
 			}
 		}
@@ -106,9 +66,7 @@ body {
 	font-size: 2rem;
 	margin: var(--body-margin);
 
-	//background-color: map-deep-get($map-colors, black, hsla);
-	//background-color: map-deep-merge($map-colors, black);
-	background-color: var(--clr-body-bg);
+	background-color: var(--clr-body-bg); 
 	color: var(--clr-body);
 }
 
@@ -140,7 +98,7 @@ p {
 	&__footer {
 		grid-area: footer;
 		padding: 0px;
-		height: var(--logo-height);
+		height: 20px;//var(--logo-height);
 	}
 	display: grid;
 	grid-template-areas:
@@ -157,7 +115,7 @@ p {
 	);
 	max-width: var(--body-max-width);
 	//min-height: 500px;
-	height: calc(100vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
+	height: calc(90vh - (var(--body-margin) * 2) - (var(--body-border) * 2));
 	overflow: hidden;
 
 	margin: 0 auto;
