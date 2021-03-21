@@ -93,7 +93,7 @@ p {
 		padding: 0px 20px;
 		overflow-y: scroll;
 		scrollbar-width: thin;
-		scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
+		scrollbar-color: var(--clr-scollbar);
 	}
 	&__footer {
 		grid-area: footer;

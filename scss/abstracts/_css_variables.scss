@@ -38,6 +38,8 @@
 	--clr-logo-secondary: var(--clr-primary-fg);
 	--clr-radio-btn-bg: hsla(var(--hsla-primary-fg));
 
+	--clr-scollbar: rgba(0, 0, 0, 0.1) transparent;
+
 	.theme {
 		/* Dark Mode Theme Colours */
 		&--dark {
@@ -63,6 +65,8 @@
 			--clr-logo-primary: var(--clr-primary-bg);
 			--clr-logo-secondary: var(--clr-primary-fg);
 			--clr-radio-btn-bg: hsla(var(--hsla-primary-fg));
+
+			--clr-scollbar: rgba(255, 255, 255, 0.1) transparent;
 		}
 	}
 }
