@@ -50,7 +50,9 @@
 	--clr-logo-secondary: var(--clr-primary-fg);
 	--clr-radio-btn-bg: hsla(var(--hsla-primary-fg));
 
-	--clr-scollbar: rgba(0, 0, 0, 0.1) transparent;
+	--clr-content-bg-fade-from: rgba(185, 244, 47, 1);
+	--clr-content-bg-fade-to: rgba(185, 244, 47, 0);
+	--clr-scollbar: rgba(0, 0, 0, 0.1);
 
 	.theme {
 		/* Dark Mode Theme Colours */
@@ -79,8 +81,10 @@
 			--clr-logo-secondary: var(--clr-primary-fg);
 			--clr-radio-btn-bg: hsla(var(--hsla-primary-fg));
 			
-			//--clr-scollbar: rgba(185, 244, 47, 0.1) transparent;
-			--clr-scollbar: rgba(255, 255, 255, 0.1) transparent;
+			--clr-content-bg-fade-from: rgba(18, 18, 18, 1);
+			--clr-content-bg-fade-to: rgba(18, 18, 18, 0);
+					//--clr-scollbar: rgba(185, 244, 47, 0.1) transparent;
+			--clr-scollbar: rgba(255, 255, 255, 0.1);
 		}
 	}
 }

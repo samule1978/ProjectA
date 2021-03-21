@@ -94,13 +94,22 @@ p {
 		grid-area: content;
 		overflow-y: scroll;
 		scrollbar-width: thin;
-		scrollbar-color: var(--clr-scollbar);
+		scrollbar-color: var(--clr-scollbar) transparent;
 		height: calc(var(--body-height) - var(--gc_header_height_total) - var(--gc_footer_height_total));
 		z-index: 90;
 
+		&::-webkit-scrollbar {
+			background-color: transparent;			
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--clr-scollbar);
+			border-radius: 10px;
+		}
+
 		&:before {
 			content: "";
-			background-image: linear-gradient(180deg, var(--clr-primary-bg), transparent);			
+			background: webkit-linear-gradient(180deg, var(--clr-content-bg-fade-from), var(--clr-content-bg-fade-to));
+			background: linear-gradient(180deg, var(--clr-content-bg-fade-from), var(--clr-content-bg-fade-to));
 			top: calc(-1 * (var(--gc_header_height) / 2));
 			width: 100%;
 			height: 100px;			
@@ -109,7 +118,8 @@ p {
 
 		&:after {
 			content: "";
-			background-image: linear-gradient(180deg, transparent, var(--clr-primary-bg));
+			background: webkit-linear-gradient(180deg, var(--clr-content-bg-fade-to), var(--clr-content-bg-fade-from));
+			background: linear-gradient(180deg, var(--clr-content-bg-fade-to), var(--clr-content-bg-fade-from));
 			bottom: 0;
 			width: 100%;
 			height: 100px;			
@@ -180,6 +190,8 @@ p {
 		clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
 
 		overflow: hidden;
+
+		z-index: 110;
 
 		svg {
 			transform: rotate(-45deg);

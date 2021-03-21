@@ -69,7 +69,9 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
   --clr-logo-primary: var(--clr-primary-bg);
   --clr-logo-secondary: var(--clr-primary-fg);
   --clr-radio-btn-bg: hsla(var(--hsla-primary-fg));
-  --clr-scollbar: rgba(0, 0, 0, 0.1) transparent;
+  --clr-content-bg-fade-from: rgba(185, 244, 47, 1);
+  --clr-content-bg-fade-to: rgba(185, 244, 47, 0);
+  --clr-scollbar: rgba(0, 0, 0, 0.1);
 }
 
 :root .theme {
@@ -97,7 +99,9 @@ Files inside this folder can contain abstract settings, helpers or functions. Th
   --clr-logo-primary: var(--clr-primary-bg);
   --clr-logo-secondary: var(--clr-primary-fg);
   --clr-radio-btn-bg: hsla(var(--hsla-primary-fg));
-  --clr-scollbar: rgba(255, 255, 255, 0.1) transparent;
+  --clr-content-bg-fade-from: rgba(18, 18, 18, 1);
+  --clr-content-bg-fade-to: rgba(18, 18, 18, 0);
+  --clr-scollbar: rgba(255, 255, 255, 0.1);
 }
 
 @-webkit-keyframes fadeIn {
@@ -465,15 +469,25 @@ p {
   grid-area: content;
   overflow-y: scroll;
   scrollbar-width: thin;
-  scrollbar-color: var(--clr-scollbar);
+  scrollbar-color: var(--clr-scollbar) transparent;
   height: calc(var(--body-height) - var(--gc_header_height_total) - var(--gc_footer_height_total));
   z-index: 90;
 }
 
+.grid-container__content::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+.grid-container__content::-webkit-scrollbar-thumb {
+  background-color: var(--clr-scollbar);
+  border-radius: 10px;
+}
+
 .grid-container__content:before {
   content: "";
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--clr-primary-bg)), to(transparent));
-  background-image: linear-gradient(180deg, var(--clr-primary-bg), transparent);
+  background: webkit-linear-gradient(180deg, var(--clr-content-bg-fade-from), var(--clr-content-bg-fade-to));
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--clr-content-bg-fade-from)), to(var(--clr-content-bg-fade-to)));
+  background: linear-gradient(180deg, var(--clr-content-bg-fade-from), var(--clr-content-bg-fade-to));
   top: calc(-1 * (var(--gc_header_height) / 2));
   width: 100%;
   height: 100px;
@@ -482,8 +496,9 @@ p {
 
 .grid-container__content:after {
   content: "";
-  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(var(--clr-primary-bg)));
-  background-image: linear-gradient(180deg, transparent, var(--clr-primary-bg));
+  background: webkit-linear-gradient(180deg, var(--clr-content-bg-fade-to), var(--clr-content-bg-fade-from));
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--clr-content-bg-fade-to)), to(var(--clr-content-bg-fade-from)));
+  background: linear-gradient(180deg, var(--clr-content-bg-fade-to), var(--clr-content-bg-fade-from));
   bottom: 0;
   width: 100%;
   height: 100px;
@@ -529,6 +544,7 @@ p {
   -webkit-clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
           clip-path: polygon(100% 0px, 0px 100%, 100% 100%);
   overflow: hidden;
+  z-index: 110;
 }
 
 @media (min-width: 1025px) {
