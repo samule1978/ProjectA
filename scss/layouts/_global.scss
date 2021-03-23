@@ -98,13 +98,13 @@ p {
 		height: calc(var(--body-height) - var(--gc_header_height_total) - var(--gc_footer_height_total));
 		z-index: 90;
 
-		&::-webkit-scrollbar {
+		/*&::-webkit-scrollbar {
 			background-color: transparent;			
 		}
 		&::-webkit-scrollbar-thumb {
 			background-color: var(--clr-scollbar);
 			border-radius: 10px;
-		}
+		}*/
 
 		&:before {
 			content: "";

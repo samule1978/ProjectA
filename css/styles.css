@@ -472,15 +472,13 @@ p {
   scrollbar-color: var(--clr-scollbar) transparent;
   height: calc(var(--body-height) - var(--gc_header_height_total) - var(--gc_footer_height_total));
   z-index: 90;
-}
-
-.grid-container__content::-webkit-scrollbar {
-  background-color: transparent;
-}
-
-.grid-container__content::-webkit-scrollbar-thumb {
-  background-color: var(--clr-scollbar);
-  border-radius: 10px;
+  /*&::-webkit-scrollbar {
+			background-color: transparent;			
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--clr-scollbar);
+			border-radius: 10px;
+		}*/
 }
 
 .grid-container__content:before {
