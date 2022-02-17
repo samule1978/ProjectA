@@ -12,6 +12,7 @@ let switchFavIcon = (theme) => {
 		favShortcutIcon.type = "image/x-icon";
 		document.getElementsByTagName("head")[0].appendChild(favShortcutIcon);
 
+		
 		favIcon = document.createElement("link");
 		favIcon.rel = "icon";
 		favIcon.type = "image/x-icon";
